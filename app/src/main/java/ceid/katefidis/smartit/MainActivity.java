@@ -3,13 +3,20 @@ package ceid.katefidis.smartit;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
+    final Fragment homeFragment = new HomeFragment();
+    final Fragment adddeviceFragment = new AddDeviceFragment();
+    final Fragment settingsFragment = new SettingsFragment();
+    final FragmentManager fm = getSupportFragmentManager();
+    Fragment active = homeFragment;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -18,13 +25,16 @@ public class MainActivity extends AppCompatActivity {
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             switch (item.getItemId()) {
                 case R.id.navigation_adddevice:
-                    mTextMessage.setText(R.string.title_adddevice);
+                    fm.beginTransaction().hide(active).show(adddeviceFragment).commit();
+                    active = adddeviceFragment;
                     return true;
                 case R.id.navigation_home:
-                    mTextMessage.setText(R.string.title_home);
+                    fm.beginTransaction().hide(active).show(homeFragment).commit();
+                    active = homeFragment;
                     return true;
                 case R.id.navigation_settings:
-                    mTextMessage.setText(R.string.title_settings);
+                    fm.beginTransaction().hide(active).show(settingsFragment).commit();
+                    active = settingsFragment;
                     return true;
             }
             return false;
@@ -36,11 +46,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextMessage = (TextView) findViewById(R.id.message);
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = findViewById(R.id.navigation);
         //set home tab as default navigation item
         navigation.setSelectedItemId(R.id.navigation_home);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        fm.beginTransaction().add(R.id.main_container, settingsFragment, "3").hide(settingsFragment).commit();
+        fm.beginTransaction().add(R.id.main_container, adddeviceFragment, "2").hide(adddeviceFragment).commit();
+        fm.beginTransaction().add(R.id.main_container,homeFragment, "1").commit();
     }
 
 }

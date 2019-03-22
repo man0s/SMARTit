@@ -3,4 +3,8 @@
     <string name="title_home">Home</string>
     <string name="title_adddevice">Add Device</string>
     <string name="title_settings">Settings</string>
+    <string name="teststring">This is another activity</string>
+    <string name="settings_view">Settings View</string>
+    <string name="home_view">Home View</string>
+    <string name="add_device_view">Add Device View</string>
 </resources>
