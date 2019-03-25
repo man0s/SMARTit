@@ -6,21 +6,107 @@
     android:layout_height="match_parent"
     tools:context=".AddDeviceFragment">
 
-    <android.support.constraint.ConstraintLayout
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/adddeviceText2"
+            android:layout_width="wrap_content"
+            android:layout_height="91dp"
+            android:baselineAligned="false"
+            android:gravity="center"
+            android:text="Add a device via:"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="41dp"
+            tools:layout_conversion_absoluteWidth="225dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="451dp" />
+
+        <Button
+            android:id="@+id/QRcodescannerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="77dp"
+            android:onClick="scanQR"
+            android:text="QR Code Scanner"
+            android:textSize="24sp"
+            tools:layout_conversion_absoluteHeight="102dp"
+            tools:layout_conversion_absoluteWidth="251dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="731dp" />
 
         <TextView
             android:id="@+id/adddeviceText"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="156dp"
-            android:text="@string/add_device_view"
-            android:textSize="30sp"
+            android:layout_height="72dp"
+            android:gravity="center"
+            android:text="or"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="36sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="15dp"
+            tools:layout_conversion_absoluteWidth="33dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="717dp" />
 
-    </android.support.constraint.ConstraintLayout>
+        <TextView
+            android:id="@+id/adddeviceText3"
+            android:layout_width="wrap_content"
+            android:layout_height="66dp"
+            android:gravity="center"
+            android:text="Serial code:"
+            android:textColor="@color/ic_launcher_background"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="187dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="350dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_conversion_absoluteHeight="0dp"
+            tools:layout_conversion_absoluteWidth="395dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="834dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/serialnumberInput"
+                android:layout_width="397dp"
+                android:layout_height="61dp"
+                android:hint="Enter your device serial number"
+                tools:layout_conversion_absoluteHeight="0dp"
+                tools:layout_conversion_absoluteWidth="395dp"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="845dp" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/adddeviceButton"
+            android:layout_width="282dp"
+            android:layout_height="81dp"
+            android:clickable="false"
+            android:onClick="addDevice"
+            android:text="Add Device"
+            android:textSize="24sp"
+            tools:layout_conversion_absoluteHeight="58dp"
+            tools:layout_conversion_absoluteWidth="251dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </LinearLayout>
 
 </FrameLayout>

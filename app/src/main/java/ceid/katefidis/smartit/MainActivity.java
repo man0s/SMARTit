@@ -3,12 +3,16 @@ package ceid.katefidis.smartit;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,6 +58,33 @@ public class MainActivity extends AppCompatActivity {
         fm.beginTransaction().add(R.id.main_container, settingsFragment, "3").hide(settingsFragment).commit();
         fm.beginTransaction().add(R.id.main_container, adddeviceFragment, "2").hide(adddeviceFragment).commit();
         fm.beginTransaction().add(R.id.main_container,homeFragment, "1").commit();
+    }
+
+    /** Called when the user taps the Scan QR Code button */
+    public void scanQR(View view) {
+        String infoText = "Scanning QR Code";
+        Toast.makeText(MainActivity.this, infoText, infoText.length()).show();
+        Log.i("info", infoText);
+
+        //Call function that scans the QR Code
+        //if the QR Code input is a serial number then add the device to DB
+        //if device already exists in DB show that
+        //else if device added then successful info text
+        //else not successful info text
+    }
+
+    /** Called when the user taps the Add Device button */
+    public void addDevice(View view) {
+        TextInputEditText serialnumberText = findViewById(R.id.serialnumberInput);
+        String serialNumber = serialnumberText.getText().toString();
+        String infoText = "Adding Device #" + serialNumber;
+        Toast.makeText(MainActivity.this, infoText, infoText.length()).show();
+        Log.i("info", "Adding Device #" + serialNumber);
+
+        //Call function that adds device to DB
+        //if device already exists in DB show that
+        //else if device added then successful info text
+        //else not successful info text
     }
 
 }
