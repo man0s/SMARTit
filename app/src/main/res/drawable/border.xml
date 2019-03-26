@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< refs/remotes/origin/master
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
@@ -7,3 +8,11 @@
         </shape>
     </item>
 </layer-list>
+=======
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle">
+   <stroke
+        android:width="1dip"
+        android:color="#303030" />
+</shape>
+>>>>>>> Replaced button w/ switch
