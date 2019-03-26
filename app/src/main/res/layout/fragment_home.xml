@@ -12,33 +12,8 @@
         android:orientation="vertical">
 
         <LinearLayout
-<<<<<<< refs/remotes/origin/master
             android:layout_width="match_parent"
             android:layout_height="178dp">
-=======
-            android:layout_width="205dp"
-            android:layout_height="195dp"
-            android:background="@drawable/border"
-            android:padding="5dip"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="203dp"
-                android:layout_height="wrap_content"
-                android:text="Device #1"
-                android:textAlignment="center"
-                android:textColor="@color/ic_launcher_background"
-                android:textSize="30sp" />
-
-            <Switch
-                android:id="@+id/switch3"
-                android:layout_width="match_parent"
-                android:layout_height="91dp"
-                android:switchMinWidth="60dp"
-                android:text="On/Off" />
->>>>>>> Replaced button w/ switch
 
             <LinearLayout
                 android:layout_width="205dp"
@@ -272,16 +247,9 @@
             android:layout_height="177dp">
 
             <LinearLayout
-<<<<<<< refs/remotes/origin/master
                 android:layout_width="205dp"
                 android:layout_height="177dp"
                 android:background="@drawable/border"
-=======
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/border"
-                android:padding="5dip"
->>>>>>> Replaced button w/ switch
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -295,20 +263,12 @@
                     android:textSize="30sp" />
 
                 <Switch
-<<<<<<< refs/remotes/origin/master
                     android:id="@+id/device_switch5"
                     android:layout_width="191dp"
                     android:layout_height="77dp"
                     android:switchMinWidth="55dp"
                     android:text="On/Off"
                     android:textSize="24sp" />
-=======
-                    android:id="@+id/switch4"
-                    android:layout_width="match_parent"
-                    android:layout_height="91dp"
-                    android:switchMinWidth="60dp"
-                    android:text="On/Off" />
->>>>>>> Replaced button w/ switch
 
                 <LinearLayout
                     android:layout_width="match_parent"
