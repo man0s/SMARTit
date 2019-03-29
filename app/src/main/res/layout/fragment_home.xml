@@ -9,82 +9,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="205dp"
-            android:layout_height="195dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="203dp"
-                android:layout_height="wrap_content"
-                android:text="Device #1"
-                android:textAlignment="center"
-                android:textColor="@color/ic_launcher_background"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="91dp"
-                android:text="On/Off" />
+            android:layout_width="match_parent"
+            android:layout_height="178dp">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Delete" />
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="   " />
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Settings" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="211dp"
-            android:layout_height="195dp"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="205dp"
+                android:layout_height="190dp"
+                android:background="@drawable/border"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/device_title1"
                     android:layout_width="203dp"
                     android:layout_height="wrap_content"
-                    android:text="Device #2"
+                    android:text="Device #1"
                     android:textAlignment="center"
                     android:textColor="@color/ic_launcher_background"
                     android:textSize="30sp" />
 
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="91dp"
-                    android:text="On/Off" />
+                <Switch
+                    android:id="@+id/device_switch1"
+                    android:layout_width="191dp"
+                    android:layout_height="77dp"
+                    android:switchMinWidth="55dp"
+                    android:text="On/Off"
+                    android:textSize="24sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -92,7 +45,123 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/device_delete1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delete" />
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="   " />
+
+                    <Button
+                        android:id="@+id/device_settings1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Settings" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="211dp"
+                android:layout_height="190dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/device_title2"
+                        android:layout_width="203dp"
+                        android:layout_height="wrap_content"
+                        android:text="Device #2"
+                        android:textAlignment="center"
+                        android:textColor="@color/ic_launcher_background"
+                        android:textSize="30sp" />
+
+                    <Switch
+                        android:id="@+id/device_switch2"
+                        android:layout_width="191dp"
+                        android:layout_height="77dp"
+                        android:switchMinWidth="55dp"
+                        android:text="On/Off"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/device_delete2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Delete" />
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="   " />
+
+                        <Button
+                            android:id="@+id/device_settings2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Settings" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="178dp">
+
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="190dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/device_title3"
+                    android:layout_width="203dp"
+                    android:layout_height="wrap_content"
+                    android:text="Device #3"
+                    android:textAlignment="center"
+                    android:textColor="@color/ic_launcher_background"
+                    android:textSize="30sp" />
+
+                <Switch
+                    android:id="@+id/device_switch3"
+                    android:layout_width="191dp"
+                    android:layout_height="77dp"
+                    android:switchMinWidth="55dp"
+                    android:text="On/Off"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/device_delete3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -106,14 +175,188 @@
                         android:text="   " />
 
                     <Button
-                        android:id="@+id/button4"
+                        android:id="@+id/device_settings3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="Settings" />
                 </LinearLayout>
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="211dp"
+                android:layout_height="190dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/device_title4"
+                        android:layout_width="203dp"
+                        android:layout_height="wrap_content"
+                        android:text="Device #4"
+                        android:textAlignment="center"
+                        android:textColor="@color/ic_launcher_background"
+                        android:textSize="30sp" />
+
+                    <Switch
+                        android:id="@+id/device_switch4"
+                        android:layout_width="191dp"
+                        android:layout_height="77dp"
+                        android:switchMinWidth="55dp"
+                        android:text="On/Off"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/device_delete4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Delete" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="   " />
+
+                        <Button
+                            android:id="@+id/device_settings4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Settings" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="177dp">
+
+            <LinearLayout
+                android:layout_width="205dp"
+                android:layout_height="177dp"
+                android:background="@drawable/border"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/device_title5"
+                    android:layout_width="203dp"
+                    android:layout_height="wrap_content"
+                    android:text="Device #5"
+                    android:textAlignment="center"
+                    android:textColor="@color/ic_launcher_background"
+                    android:textSize="30sp" />
+
+                <Switch
+                    android:id="@+id/device_switch5"
+                    android:layout_width="191dp"
+                    android:layout_height="77dp"
+                    android:switchMinWidth="55dp"
+                    android:text="On/Off"
+                    android:textSize="24sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/device_delete5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Delete" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="   " />
+
+                    <Button
+                        android:id="@+id/device_settings5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Settings" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="211dp"
+                android:layout_height="177dp"
+                android:background="@drawable/border"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/device_title6"
+                        android:layout_width="203dp"
+                        android:layout_height="wrap_content"
+                        android:text="Device #6"
+                        android:textAlignment="center"
+                        android:textColor="@color/ic_launcher_background"
+                        android:textSize="30sp" />
+
+                    <Switch
+                        android:id="@+id/device_switch6"
+                        android:layout_width="191dp"
+                        android:layout_height="77dp"
+                        android:switchMinWidth="55dp"
+                        android:text="On/Off"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/device_delete6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Delete" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="   " />
+
+                        <Button
+                            android:id="@+id/device_settings6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Settings" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </FrameLayout>
