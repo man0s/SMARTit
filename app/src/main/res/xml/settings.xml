@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="Language and region">
+
+        <ListPreference
+            android:summary="Default"
+            android:title="Language" />
+
+        <ListPreference
+            android:summary="Default"
+            android:title="Region" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Updates">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:summary="Update automatically when WIFI is connected"
+            android:title="Update plugins"/>
+        <ListPreference
+            android:title="Check for Updates" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Devices">
+        <ListPreference
+            android:title="Manage devices" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Home">
+        <ListPreference
+            android:title="Manage home" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Feedback">
+        <ListPreference
+            android:title="Contact Us" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

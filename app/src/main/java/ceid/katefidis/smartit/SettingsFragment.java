@@ -1,6 +1,8 @@
 package ceid.katefidis.smartit;
 
 
+import android.preference.Preference;
+import android.preference.PreferenceFragment;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -20,4 +22,5 @@ public class SettingsFragment extends Fragment {
 
         return view;
     }
+
 }
