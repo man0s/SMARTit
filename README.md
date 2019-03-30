@@ -1,6 +1,6 @@
 # SMARTit
 <p align="center">
-   <img src="https://i.imgur.com/8ePd5Vv.png">
+   <img src="https://i.imgur.com/fMb6Q78.png">
 </p>
 <br>
 <i>
