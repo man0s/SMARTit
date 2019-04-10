@@ -9,6 +9,13 @@
 </p>
 </i>
 
+## Screenshots
+<p align="center">
+   <img src="https://i.imgur.com/DpVeVw6.png" width="270" height="480">
+   <img src="https://i.imgur.com/KajbAJe.png" width="270" height="480">
+   <img src="https://i.imgur.com/TutmFcA.png" width="270" height="480">
+</p>
+
 ## Contributing
 
 Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
