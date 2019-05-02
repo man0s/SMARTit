@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_vertical"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textViewUser"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="You are"
+        android:textAlignment="center"
+        android:textColor="#DD000000"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <Button
+        android:id="@+id/adminButton"
+        android:layout_width="218dp"
+        android:layout_height="62dp"
+        android:text="Admin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <Button
+        android:id="@+id/userButton"
+        android:layout_width="218dp"
+        android:layout_height="62dp"
+        android:text="Tenant"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="163dp" />
+
+    <Button
+        android:id="@+id/securityButton"
+        android:layout_width="218dp"
+        android:layout_height="62dp"
+        android:text="Security"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+</LinearLayout>
