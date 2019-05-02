@@ -17,8 +17,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -109,16 +113,89 @@ public class MainActivity extends AppCompatActivity {
         super.onResume();
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        String userType = preferences.getString("user_type", "tenant");
+        final String userType = preferences.getString("user_type", "tenant");
 
         Log.d("UserType", userType);
+
+        if(userType.equals("tenant")){
+            Tenant tenant = new Tenant(1,"Emmanouil Katefidis", "katefidis@ceid.upatras.gr", "man0s", "12345", "6946948164");
+            final Apartment apartment = new Apartment("2016", tenant);
+
+            //when the user clicks the scan qr button
+            Button adddeviceButton = (Button) findViewById(R.id.adddeviceButton);
+
+            adddeviceButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    addDeviceTenant(view, apartment);
+                }
+            });
+
+            //when the user clicks the scan qr button
+            Button scanqrButton = (Button) findViewById(R.id.QRcodescannerButton);
+
+            scanqrButton.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View view) {
+                    scanQR(view, userType);
+                }
+            });
+
+        }
+
 
 
 
     }
 
+    /** Called when the tenant taps the Add Device button */
+    public void addDeviceTenant(View view, Apartment apartment) {
+        TextInputEditText serialnumberText = findViewById(R.id.serialnumberInput);
+        String serialNumber = serialnumberText.getText().toString();
+        int timeStamp = (int) (new Date().getTime()/1000);
+        Sensors sensor = new Sensors(timeStamp, 26, 85, 0);
+
+
+        if(!apartment.searchDevice(serialNumber)){ //an h suskeuh den uparxei sthn lista me ta devices
+            //sensor.pickEnviromentalData(); //eisagwgh live data apo to perivalon;
+            apartment.addHomeDevice(new HomeDevice(serialNumber, 0, "Test Device", sensor, -1));
+            String addText = "Device #" + serialNumber + " added!";
+            Toast.makeText(MainActivity.this, addText, addText.length()).show();
+            Log.i("info", "Device #" + serialNumber + " added!");
+        } else { //alliws an uparxei hdh
+            String addText = "Device #" + serialNumber + " already exists!";
+            Toast.makeText(MainActivity.this, addText, addText.length()).show();
+            Log.i("info", "Device #" + serialNumber + " already exists!");
+        }
+
+
+
+        //Call function that adds device to DB
+        //if device already exists in DB show that
+        //else if device added then successful info text
+        //else not successful info text
+    }
+
+    /** Called when the user taps the Add Device button */
+    public void addDevice(View view, String userType) {
+        TextInputEditText serialnumberText = findViewById(R.id.serialnumberInput);
+        String serialNumber = serialnumberText.getText().toString();
+        String infoText = "Adding Device #" + serialNumber;
+        Toast.makeText(MainActivity.this, infoText, infoText.length()).show();
+        Log.i("info", "Adding Device #" + serialNumber);
+
+
+
+        //Call function that adds device to DB
+        //if device already exists in DB show that
+        //else if device added then successful info text
+        //else not successful info text
+    }
+
     /** Called when the user taps the Scan QR Code button */
-    public void scanQR(View view) {
+    public void scanQR(View view, String userType) {
         String infoText = "Scanning QR Code";
         Toast.makeText(MainActivity.this, infoText, infoText.length()).show();
         Log.i("info", infoText);
@@ -130,18 +207,5 @@ public class MainActivity extends AppCompatActivity {
         //else not successful info text
     }
 
-    /** Called when the user taps the Add Device button */
-    public void addDevice(View view) {
-        TextInputEditText serialnumberText = findViewById(R.id.serialnumberInput);
-        String serialNumber = serialnumberText.getText().toString();
-        String infoText = "Adding Device #" + serialNumber;
-        Toast.makeText(MainActivity.this, infoText, infoText.length()).show();
-        Log.i("info", "Adding Device #" + serialNumber);
-
-        //Call function that adds device to DB
-        //if device already exists in DB show that
-        //else if device added then successful info text
-        //else not successful info text
-    }
 
 }

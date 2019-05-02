@@ -19,16 +19,6 @@
         tools:layout_editor_absoluteY="71dp" />
 
     <Button
-        android:id="@+id/adminButton"
-        android:layout_width="218dp"
-        android:layout_height="62dp"
-        android:text="Admin"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="247dp" />
-
-    <Button
         android:id="@+id/userButton"
         android:layout_width="218dp"
         android:layout_height="62dp"
@@ -37,6 +27,16 @@
         android:textStyle="bold"
         tools:layout_editor_absoluteX="96dp"
         tools:layout_editor_absoluteY="163dp" />
+
+    <Button
+        android:id="@+id/adminButton"
+        android:layout_width="218dp"
+        android:layout_height="62dp"
+        android:text="Admin"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="247dp" />
 
     <Button
         android:id="@+id/securityButton"
