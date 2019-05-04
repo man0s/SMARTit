@@ -26,14 +26,14 @@ public class Building{
 
   public boolean searchDevice(String device_id_query){
     for(MaintenanceDevice obj:maintence_device_list){
-        if(obj.getID() == device_id_query) return true;
+        if(obj.getID().equals(device_id_query)) return true;
     }
     return false;
   }
 
   public boolean searchSecDevice(String device_id_query){
     for(SecurityDevice obj:security_device_list){
-        if(obj.getID() == device_id_query) return true;
+        if(obj.getID().equals(device_id_query)) return true;
     }
     return false;
   }

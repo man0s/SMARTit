@@ -9,7 +9,7 @@ public class HomeDevice extends Device
     HomeDevice(){};
 
     // Constructor Declaration of Class
-    public HomeDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time)
+    HomeDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time)
     {
         super(device_ID, online_time, device_name, data, time);
     }
