@@ -17,11 +17,15 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
@@ -115,6 +119,18 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         final String userType = preferences.getString("user_type", "tenant");
 
+        BottomNavigationView navigation = findViewById(R.id.navigation);
+
+        if(userType.equals("admin"))
+        {
+            navigation.getMenu().findItem(R.id.navigation_home).setTitle("Building");
+            navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_building_black_24dp);
+
+        } else if(userType.equals("security")){
+            navigation.getMenu().findItem(R.id.navigation_home).setTitle("Security");
+            navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_shield_black_24dp);
+        }
+
         Log.d("UserType", userType);
 
         //Users object creation
@@ -157,6 +173,22 @@ public class MainActivity extends AppCompatActivity {
                     scanQR(view);
                 }
             });
+
+        final ListView lstItems;
+
+        lstItems = (ListView)findViewById(R.id.lstItems);
+
+        CustomList listAdapter = new
+                CustomList(MainActivity.this, apartment.getDeviceList());
+        lstItems.setAdapter(listAdapter);
+        lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                HomeDevice device = (HomeDevice) lstItems.getItemAtPosition(i);
+                Log.i("List", "You clicked on device " + device.getID());
+            }
+        });
+
 
 
 
