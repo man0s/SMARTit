@@ -11,9 +11,9 @@ public class SecurityDevice extends Device
     SecurityDevice(){};
 
     // Constructor Declaration of Class
-    SecurityDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time)
+    SecurityDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time, Boolean isEnabled)
     {
-        super(device_ID, online_time, device_name, data, time);
+        super(device_ID, online_time, device_name, data, time, isEnabled);
     }
   
     // method get 

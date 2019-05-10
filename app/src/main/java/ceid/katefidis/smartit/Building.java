@@ -47,4 +47,7 @@ public class Building{
   public void addMaintenceDevice(MaintenanceDevice obj){maintence_device_list.add(obj);}
   public void addSecurityDevice(SecurityDevice obj){security_device_list.add(obj);}
 
+  public ArrayList<MaintenanceDevice> getMaintanceDeviceList(){ return maintence_device_list; }
+  public ArrayList<SecurityDevice> getSecurityDeviceList(){ return security_device_list; }
+
 }

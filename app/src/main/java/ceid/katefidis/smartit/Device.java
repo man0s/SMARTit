@@ -10,17 +10,19 @@ public class Device
     protected String device_name;
     protected Sensors data;
     protected Integer time;
+    protected boolean isEnabled;
 
     Device(){}
   
     // Constructor Declaration of Class 
-    public Device(String device_ID, Integer online_time, String device_name, Sensors data, Integer time) 
+    public Device(String device_ID, Integer online_time, String device_name, Sensors data, Integer time, Boolean isEnabled)
     { 
         this.device_ID = device_ID;
         this.online_time = online_time;
         this.device_name = device_name;
         this.data = data;
-        this.time = time; 
+        this.time = time;
+        this.isEnabled = isEnabled;
     } 
 
     // method set
@@ -48,6 +50,11 @@ public class Device
     {
         time = newTime;
     }
+
+    public void setEnabled(Boolean isit)
+    {
+        isEnabled = isit;
+    }
   
     // method get 
 
@@ -59,6 +66,11 @@ public class Device
     public Integer getTime() 
     { 
         return time; 
+    }
+
+    public boolean getEnabled()
+    {
+        return isEnabled;
     }
 
     public void haltDevice()

@@ -20,7 +20,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -178,9 +181,16 @@ public class MainActivity extends AppCompatActivity {
 
         lstItems = (ListView)findViewById(R.id.lstItems);
 
-        CustomList listAdapter = new
-                CustomList(MainActivity.this, apartment.getDeviceList());
-        lstItems.setAdapter(listAdapter);
+
+        if(userType.equals("tenant"))
+        {
+            lstItems.setAdapter(new CustomList(MainActivity.this, apartment.getDeviceList()));
+        } else if (userType.equals("admin")){
+            lstItems.setAdapter(new CustomMaintenanceList(MainActivity.this, building.getMaintanceDeviceList()));
+        } else {
+            lstItems.setAdapter(new CustomSecurityList(MainActivity.this, building.getSecurityDeviceList()));
+        }
+
         lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
@@ -188,6 +198,17 @@ public class MainActivity extends AppCompatActivity {
                 Log.i("List", "You clicked on device " + device.getID());
             }
         });
+
+//        final ImageButton settings = lstItems.getSelectedView().findViewById(R.id.settings);
+//        settings.setOnClickListener(new View.OnClickListener() {
+//
+//            @Override
+//            public void onClick(View view) {
+//                Log.i("EPITELOUS", "PATHITHIKE");
+////                Intent i = new Intent(getContext(), DevicePreference.class);
+//                //((AppCompatActivity) context).getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
+//            }
+//        });
 
 
 
@@ -208,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
-            apartment.addHomeDevice(new HomeDevice(serialNumber, 0, serialNumber, sensor, -1));
+            apartment.addHomeDevice(new HomeDevice(serialNumber, 0, serialNumber, sensor, -1, true));
             String addText = "Device #" + serialNumber + " added!";
             Toast.makeText(MainActivity.this, addText, addText.length()).show();
             Log.i("info", "Device #" + serialNumber + " added!");
@@ -238,7 +259,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
-                building.addMaintenceDevice(new MaintenanceDevice(serialNumber, 0, serialNumber, sensor, -1));
+                building.addMaintenceDevice(new MaintenanceDevice(serialNumber, 0, serialNumber, sensor, -1, true));
                 String addText = "Device #" + serialNumber + " added!";
                 Toast.makeText(MainActivity.this, addText, addText.length()).show();
                 Log.i("info", "Device #" + serialNumber + " added!");
@@ -253,7 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
-                building.addSecurityDevice(new SecurityDevice(serialNumber, 0, serialNumber, sensor, -1));
+                building.addSecurityDevice(new SecurityDevice(serialNumber, 0, serialNumber, sensor, -1, true));
                 String addText = "Device #" + serialNumber + " added!";
                 Toast.makeText(MainActivity.this, addText, addText.length()).show();
                 Log.i("info", "Device #" + serialNumber + " added!");

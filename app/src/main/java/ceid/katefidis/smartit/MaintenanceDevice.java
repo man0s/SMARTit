@@ -11,9 +11,9 @@ public class MaintenanceDevice extends Device
     MaintenanceDevice(){};
 
     // Constructor Declaration of Class
-    MaintenanceDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time)
+    MaintenanceDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time, Boolean isEnabled)
     {
-        super(device_ID, online_time, device_name, data, time);
+        super(device_ID, online_time, device_name, data, time, isEnabled);
     }
 
 
