@@ -229,7 +229,14 @@ public class MainActivity extends AppCompatActivity {
 
             //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
-            apartment.addHomeDevice(new HomeDevice(serialNumber, 0, serialNumber, sensor, -1, true));
+            HomeDevice device = new HomeDevice(serialNumber, 0, serialNumber, sensor, -1, true);
+
+            //lipsi apo ton server ti syskeuh antistoixei to sygkektimeno serialnumber.. px aircondition
+
+            device.setSettings("airconditoner");
+
+            apartment.addHomeDevice(device);
+
             String addText = "Device #" + serialNumber + " added!";
             Toast.makeText(MainActivity.this, addText, addText.length()).show();
             Log.i("info", "Device #" + serialNumber + " added!");

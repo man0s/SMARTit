@@ -29,83 +29,20 @@
 
                 <Switch
                     android:id="@+id/device_switch"
-                    android:layout_width="wrap_content"
+                    android:layout_width="96dp"
                     android:layout_height="match_parent"
                     android:layout_marginEnd="10dp"
                     android:gravity="right|center"
                     android:switchMinWidth="65dp" />
 
-                <android.support.constraint.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageButton
-                        android:id="@+id/settings31"
-                        android:layout_width="33dp"
-                        android:layout_height="23dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"
-                        app:srcCompat="@drawable/ic_settings_black_24dp"
-                        tools:layout_editor_absoluteX="44dp"
-                        tools:layout_editor_absoluteY="4dp" />
-
-                    <ImageButton
-                        android:id="@+id/settings26"
-                        android:layout_width="33dp"
-                        android:layout_height="23dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"
-                        app:srcCompat="@drawable/ic_settings_black_24dp"
-                        tools:layout_editor_absoluteX="44dp"
-                        tools:layout_editor_absoluteY="71dp" />
-
-                    <ImageButton
-                        android:id="@+id/settings29"
-                        android:layout_width="33dp"
-                        android:layout_height="23dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"
-                        app:srcCompat="@drawable/ic_settings_black_24dp"
-                        tools:layout_editor_absoluteX="44dp"
-                        tools:layout_editor_absoluteY="39dp" />
-
-                    <ImageButton
-                        android:id="@+id/settings30"
-                        android:layout_width="33dp"
-                        android:layout_height="23dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"
-                        app:srcCompat="@drawable/ic_settings_black_24dp"
-                        tools:layout_editor_absoluteX="2dp"
-                        tools:layout_editor_absoluteY="71dp" />
-
-                    <ImageButton
-                        android:id="@+id/settings32"
-                        android:layout_width="33dp"
-                        android:layout_height="23dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"
-                        app:srcCompat="@drawable/ic_settings_black_24dp"
-                        tools:layout_editor_absoluteX="2dp"
-                        tools:layout_editor_absoluteY="39dp" />
-
-                    <ImageButton
-                        android:id="@+id/settings33"
-                        android:layout_width="33dp"
-                        android:layout_height="23dp"
-                        android:layout_gravity="center"
-                        android:layout_weight="1"
-                        android:background="#00FFFFFF"
-                        app:srcCompat="@drawable/ic_settings_black_24dp"
-                        tools:layout_editor_absoluteX="3dp"
-                        tools:layout_editor_absoluteY="4dp" />
-
-                </android.support.constraint.ConstraintLayout>
+                <ImageButton
+                    android:id="@+id/device_settings"
+                    android:layout_width="33dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/ic_settings_black_24dp" />
 
             </LinearLayout>
         </RelativeLayout>

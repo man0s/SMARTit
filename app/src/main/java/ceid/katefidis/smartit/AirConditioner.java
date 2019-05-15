@@ -11,8 +11,8 @@ public class AirConditioner extends HomeDevice
     private Integer intensityFan;
   
     // Constructor Declaration of Class 
-    public AirConditioner(Integer temperature, String mode, Integer directionFan, Integer intensityFan) 
-    { 
+    public AirConditioner(Integer temperature, String mode, Integer directionFan, Integer intensityFan)
+    {
         this.temperature = temperature;
         this.mode = mode;
         this.directionFan = directionFan;
@@ -56,7 +56,7 @@ public class AirConditioner extends HomeDevice
         directionFan = newDirection; 
     }
 
-    public void setName(Integer newIntensity) 
+    public void setIntensityFan(Integer newIntensity)
     { 
         intensityFan = newIntensity;
     }
