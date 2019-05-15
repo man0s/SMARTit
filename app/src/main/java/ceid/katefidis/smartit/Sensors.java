@@ -10,6 +10,7 @@ public class Sensors{
     private Sensors previousData;
     
     public Sensors(int Timestamp, int Temperature, int lighting_level, int smoke_detection){
+        this.previousData = new Sensors(this.Timestamp, this.Temperature, this.lighting_level, this.smoke_detection);
         this.Timestamp = Timestamp;
         this.Temperature = Temperature;
         this.lighting_level = lighting_level;
@@ -26,7 +27,7 @@ public class Sensors{
 
 
     public void setTimestamp(int p_timestamp){Timestamp = p_timestamp;}
-    public void setTemparature(int p_temp){Temperature = p_temp;}
+    public void setTemperature(int p_temp){Temperature = p_temp;}
     public void setLightingLevel(int p_light){lighting_level = p_light;}
     public void setSmokeDetection(int p_smoke){smoke_detection = p_smoke;}
 
@@ -44,7 +45,7 @@ public class Sensors{
             smoke_detection = previousData.getSmokeDetection();
         }else{ //swsta dedomena, prwta apo8hkeuw ta apotelesmata ths prohgoumenhs metrhshs kai meta apo8hkeuw ta kainouria
             previousData.setTimestamp(Timestamp);
-            previousData.setTemparature(Temperature);
+            previousData.setTemperature(Temperature);
             previousData.setLightingLevel(lighting_level);
             previousData.setSmokeDetection(smoke_detection);
 

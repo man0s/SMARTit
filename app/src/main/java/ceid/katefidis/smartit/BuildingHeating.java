@@ -8,15 +8,13 @@ public class BuildingHeating extends MaintenanceDevice
     private String mode;
     private Integer temperature;
   
-    // Constructor Declaration of Class 
-    public BuildingHeating(String mode)
-    { 
-        this.mode = mode; 
-    }
+    // Constructor Declaration of Class
 
-    public BuildingHeating(Integer temperature) 
+    public BuildingHeating(Integer temperature, String mode)
+
     { 
-        this.temperature = temperature; 
+        this.temperature = temperature;
+        this.mode = mode;
     } 
     
     // method get 

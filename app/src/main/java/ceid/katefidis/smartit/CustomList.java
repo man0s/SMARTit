@@ -84,7 +84,7 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                     if(deviceList.get(position).getSettings().equals("airconditioner"))
                     {
                         //settings = new String[]{deviceList.get(position).getID(), deviceList.get(position).getAirconditioner().getMode(), "camel", "sheep", "goat"};
-                        settings = new String[]{"Temperature", "Mode", "Fan Direction", "Fan Intensity"};
+                        settings = new String[]{"Temperature", "Mode", "Fan Direction", "Fan Intensity", "Auto"};
 
                         builder.setItems(settings, new DialogInterface.OnClickListener() {
                             @Override
@@ -131,12 +131,11 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                         alertDialog0.show();
                                         break;
                                     case 1: // mode
-
                                         // setup the alert builder
                                         AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
                                         builder1.setTitle("Choose a Mode");
                                         // add a radio button list
-                                        String[] animals = {"Cool", "Normal", "Heat"};
+                                        String[] modes = {"Cool", "Normal", "Heat"};
                                         int checkedItem = 1; // normal
                                         if(deviceList.get(position).getAirconditioner().getMode().equals("cool"))
                                         {
@@ -145,7 +144,7 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                         {
                                             checkedItem = 2;
                                         }
-                                        builder1.setSingleChoiceItems(animals, checkedItem, new DialogInterface.OnClickListener() {
+                                        builder1.setSingleChoiceItems(modes, checkedItem, new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 switch (which) {
@@ -256,6 +255,11 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                         AlertDialog alertDialog3 = builder3.create();
                                         alertDialog3.show();
                                         break;
+                                    case 4:
+                                        //automath epilogh, pairnei ta data twn sensorwn kai ginetai automath eisagwgh twn rithmisewn
+                                        deviceList.get(position).getAirconditioner().setTemperature(deviceList.get(position).getSensorData().getTemperature());
+                                        Toast.makeText(context, "Automatic Temperature " + deviceList.get(position).getAirconditioner().getTemperature() + "℃!", Toast.LENGTH_SHORT).show();
+                                        break;
                                 }
                             }
                         });
@@ -266,13 +270,56 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
 
                     } else if(deviceList.get(position).getSettings().equals("waterheater"))
                     {
-                        settings = new String[]{"Temperature"};
+                        settings = new String[]{"Temperature", "Auto"};
 
                         builder.setItems(settings, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
                                     case 0: // temperature
+                                        AlertDialog.Builder builder0 = new AlertDialog.Builder(context);
+                                        LayoutInflater inflater = context.getLayoutInflater();
+                                        View view=inflater.inflate(R.layout.seekbar_dialog,null);
+                                        builder0.setTitle("Temperature");
+                                        builder0.setView(view);
+                                        final SeekBar seekBar = (SeekBar) view.findViewById(R.id.seekBar1);
+                                        final TextView seekProgress = (TextView) view.findViewById(R.id.seekProgress);
+                                        seekBar.setProgress(deviceList.get(position).getWaterheater().getTemperature());
+                                        seekProgress.setText(deviceList.get(position).getWaterheater().getTemperature() + " ℃");
+                                        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                            int progressValue;
+
+                                            @Override
+                                            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                                progressValue = progress;
+                                                seekProgress.setText(progress + " ℃");
+                                            }
+
+                                            @Override
+                                            public void onStartTrackingTouch(SeekBar seekBar) {
+                                            }
+
+                                            @Override
+                                            public void onStopTrackingTouch(SeekBar seekBar) {
+                                                seekProgress.setText(progressValue + " ℃");
+                                            }
+                                        });
+
+                                        builder0.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialogInterface, int i) {
+                                                deviceList.get(position).getWaterheater().setTemperature(seekBar.getProgress());
+                                                Toast.makeText(context, "Temperature has been set to " + seekBar.getProgress() + "℃!", Toast.LENGTH_SHORT).show();
+                                            }
+                                        });
+
+                                        AlertDialog alertDialog0 = builder0.create();
+                                        alertDialog0.show();
+                                        break;
+                                    case 1:
+                                        //automath epilogh, pairnei ta data twn sensorwn kai ginetai automath eisagwgh twn rithmisewn
+                                        deviceList.get(position).getWaterheater().setTemperature(deviceList.get(position).getSensorData().getTemperature());
+                                        Toast.makeText(context, "Automatic Temperature " + deviceList.get(position).getWaterheater().getTemperature() + "℃!", Toast.LENGTH_SHORT).show();
                                         break;
                                 }
                             }
@@ -288,6 +335,49 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                             public void onClick(DialogInterface dialog, int which) {
                                 switch (which) {
                                     case 0: // mode
+                                        // setup the alert builder
+                                        AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
+                                        builder1.setTitle("Choose a Mode");
+                                        // add a radio button list
+                                        String[] modes = {"Slow", "Normal", "Fast"};
+                                        int checkedItem = 1; // normal
+                                        if(deviceList.get(position).getCleaningrobot().getMode().equals("slow"))
+                                        {
+                                            checkedItem = 0;
+                                        } else if(deviceList.get(position).getCleaningrobot().getMode().equals("fast"))
+                                        {
+                                            checkedItem = 2;
+                                        }
+                                        builder1.setSingleChoiceItems(modes, checkedItem, new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                switch (which) {
+                                                    case 0: // Cool
+                                                        deviceList.get(position).getCleaningrobot().setMode("slow");
+                                                        break;
+                                                    case 1: // normal
+                                                        deviceList.get(position).getCleaningrobot().setMode("normal");
+                                                        break;
+                                                    case 2: // heat
+                                                        deviceList.get(position).getCleaningrobot().setMode("fast");
+                                                        break;
+                                                }
+                                            }
+                                        });
+
+                                        // add OK and Cancel buttons
+                                        builder1.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                Toast.makeText(getContext(),"Mode has been set to "+ deviceList.get(position).getCleaningrobot().getMode() +"!", Toast.LENGTH_LONG).show();
+                                                // user clicked OK
+                                            }
+                                        });
+                                        builder1.setNegativeButton("Cancel", null);
+
+                                        // create and show the alert dialog
+                                        AlertDialog dialog1 = builder1.create();
+                                        dialog1.show();
                                         break;
                                 }
                             }

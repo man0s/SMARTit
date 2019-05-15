@@ -4,7 +4,10 @@ package ceid.katefidis.smartit;
   
 public class MaintenanceDevice extends Device
 { 
-    // Instance Variables 
+    // Instance Variables
+    private Sprinklers sprinkler;
+    private BuildingHeating heating;
+    private Lighting lighting;
   
     // Constructor Declaration of Class
 
@@ -16,16 +19,34 @@ public class MaintenanceDevice extends Device
         super(device_ID, online_time, device_name, data, time, isEnabled);
     }
 
+    public BuildingHeating getHeating() {
+        return heating;
+    }
 
-    // method get 
-    public String getSettings() 
-    { 
-        return null;
-    } 
-  
+    public Sprinklers getSprinkler() {
+        return sprinkler;
+    }
+
+    public Lighting getLighting() {
+        return lighting;
+    }
+
     // method set
-    public void setSettings(String test)
-    { 
-        
-    } 
+    public void setSettings(String settings)
+    {
+        if(settings.equals("sprinkler")){
+            sprinkler = new Sprinklers(30, 50);
+        } else if(settings.equals("heating")){
+            heating = new BuildingHeating(27, "normal");
+        } else lighting = new Lighting("#303030", 55);
+
+    }
+
+    public String getSettings()
+    {
+        if(sprinkler != null)  return "sprinkler";
+        else if(heating !=null) return "heating";
+        else if(lighting != null) return "lighting";
+        else return null;
+    }
 }

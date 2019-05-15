@@ -78,4 +78,7 @@ public class Device
         //todo
     }
 
+    public Sensors getSensorData() {
+        return data;
+    }
 }

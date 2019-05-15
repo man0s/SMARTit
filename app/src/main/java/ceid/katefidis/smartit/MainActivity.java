@@ -191,13 +191,13 @@ public class MainActivity extends AppCompatActivity {
             lstItems.setAdapter(new CustomSecurityList(MainActivity.this, building.getSecurityDeviceList()));
         }
 
-        lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                HomeDevice device = (HomeDevice) lstItems.getItemAtPosition(i);
-                Log.i("List", "You clicked on device " + device.getID());
-            }
-        });
+//        lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                HomeDevice device = (HomeDevice) lstItems.getItemAtPosition(i);
+//                Log.i("List", "You clicked on device " + device.getID());
+//            }
+//        });
 
 //        final ImageButton settings = lstItems.getSelectedView().findViewById(R.id.settings);
 //        settings.setOnClickListener(new View.OnClickListener() {
@@ -231,9 +231,16 @@ public class MainActivity extends AppCompatActivity {
 
             HomeDevice device = new HomeDevice(serialNumber, 0, serialNumber, sensor, -1, true);
 
-            //lipsi apo ton server ti syskeuh antistoixei to sygkektimeno serialnumber.. px aircondition
+            //lipsi apo ton server ti syskeuh antistoixei to sygkektimeno serialnumber..
 
-            device.setSettings("airconditoner");
+            //An to serialnumberarxizei me 1, einai Aircondition
+            if(serialNumber.charAt(0) == '1'){
+                device.setSettings("airconditoner");
+                //An to serialnumberarxizei me 2, einai Waterheater
+            } else if (serialNumber.charAt(0) == '2') {
+                device.setSettings("waterheater");
+                //alliws einai cleaningrobot
+            } else device.setSettings("cleaningrobot");
 
             apartment.addHomeDevice(device);
 
@@ -266,7 +273,18 @@ public class MainActivity extends AppCompatActivity {
 
                 //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
-                building.addMaintenceDevice(new MaintenanceDevice(serialNumber, 0, serialNumber, sensor, -1, true));
+                MaintenanceDevice device  = new MaintenanceDevice(serialNumber, 0, serialNumber, sensor, -1, true);
+
+                //An to serialnumberarxizei me 1, einai Aircondition
+                if(serialNumber.charAt(0) == '1'){
+                    device.setSettings("sprinkler");
+                    //An to serialnumberarxizei me 2, einai Waterheater
+                } else if (serialNumber.charAt(0) == '2') {
+                    device.setSettings("heating");
+                    //alliws einai cleaningrobot
+                } else device.setSettings("lighting");
+
+                building.addMaintenceDevice(device);
                 String addText = "Device #" + serialNumber + " added!";
                 Toast.makeText(MainActivity.this, addText, addText.length()).show();
                 Log.i("info", "Device #" + serialNumber + " added!");

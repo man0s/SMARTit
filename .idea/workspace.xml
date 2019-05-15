@@ -29,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="233" column="12" selection-start-line="233" selection-start-column="12" selection-end-line="233" selection-end-column="12" />
+            <state relative-caret-position="64">
+              <caret line="281" column="59" selection-start-line="281" selection-start-column="59" selection-end-line="281" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,10 +39,106 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/AirConditioner.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="52" selection-start-line="52" selection-end-line="52" />
+            <state relative-caret-position="1352">
+              <caret line="311" column="74" selection-start-line="311" selection-start-column="74" selection-end-line="311" selection-end-column="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2298#22770#0" expanded="true" />
+                <element signature="e#2707#2935#0" expanded="true" />
+                <element signature="e#2934#2935#0" expanded="true" />
+                <element signature="e#3206#8980#0" expanded="true" />
+                <element signature="e#5420#5961#0" expanded="true" />
+                <element signature="e#5960#5961#0" expanded="true" />
+                <element signature="e#8168#8717#0" expanded="true" />
+                <element signature="e#8716#8717#0" expanded="true" />
+                <element signature="e#8979#8980#0" expanded="true" />
+                <element signature="e#9289#15933#0" expanded="true" />
+                <element signature="e#11517#12068#0" expanded="true" />
+                <element signature="e#12067#12068#0" expanded="true" />
+                <element signature="e#13276#14343#0" expanded="true" />
+                <element signature="e#14342#14343#0" expanded="true" />
+                <element signature="e#14481#14988#0" expanded="true" />
+                <element signature="e#14987#14988#0" expanded="true" />
+                <element signature="e#15932#15933#0" expanded="true" />
+                <element signature="e#16174#22508#0" expanded="true" />
+                <element signature="e#21704#21705#0" expanded="true" />
+                <element signature="e#22507#22508#0" expanded="true" />
+                <element signature="e#22769#22770#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomSecurityList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Sensors.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="874">
+              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MaintenanceDevice.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1081">
+              <caret line="47" column="44" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="47" />
+              <folding>
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#632#633#0" expanded="true" />
+                <element signature="e#672#673#0" expanded="true" />
+                <element signature="e#704#705#0" expanded="true" />
+                <element signature="e#741#742#0" expanded="true" />
+                <element signature="e#772#773#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="257" selection-start-line="257" selection-end-line="261" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2934#29399#0" expanded="true" />
+                <element signature="e#3391#3739#0" expanded="true" />
+                <element signature="e#3738#3739#0" expanded="true" />
+                <element signature="e#4265#17229#0" expanded="true" />
+                <element signature="e#6623#7205#0" expanded="true" />
+                <element signature="e#7204#7205#0" expanded="true" />
+                <element signature="e#8499#9648#0" expanded="true" />
+                <element signature="e#9647#9648#0" expanded="true" />
+                <element signature="e#9794#10332#0" expanded="true" />
+                <element signature="e#10331#10332#0" expanded="true" />
+                <element signature="e#12840#13424#0" expanded="true" />
+                <element signature="e#13423#13424#0" expanded="true" />
+                <element signature="e#15781#16368#0" expanded="true" />
+                <element signature="e#16367#16368#0" expanded="true" />
+                <element signature="e#17228#17229#0" expanded="true" />
+                <element signature="e#17634#21420#0" expanded="true" />
+                <element signature="e#19986#20565#0" expanded="true" />
+                <element signature="e#20564#20565#0" expanded="true" />
+                <element signature="e#21419#21420#0" expanded="true" />
+                <element signature="e#23036#24181#0" expanded="true" />
+                <element signature="e#24180#24181#0" expanded="true" />
+                <element signature="e#29398#29399#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,8 +146,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/HomeDevice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1058">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+            <state relative-caret-position="161">
+              <caret line="22" selection-start-line="22" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="e#876#877#0" expanded="true" />
                 <element signature="e#913#914#0" expanded="true" />
@@ -65,63 +161,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/UserTypeActivity.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Device.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="24" column="46" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+            <state relative-caret-position="1196">
+              <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_single.xml">
-          <provider selected="true" editor-type-id="android-designer2" />
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Building.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="50" column="87" selection-start-line="50" selection-start-column="87" selection-end-line="50" selection-end-column="87" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="255" column="85" lean-forward="true" selection-start-line="255" selection-start-column="85" selection-end-line="255" selection-end-column="85" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2934#18294#0" expanded="true" />
-                <element signature="e#3391#3739#0" expanded="true" />
-                <element signature="e#3738#3739#0" expanded="true" />
-                <element signature="e#4257#16678#0" expanded="true" />
-                <element signature="e#6615#7198#0" expanded="true" />
-                <element signature="e#7197#7198#0" expanded="true" />
-                <element signature="e#8497#9646#0" expanded="true" />
-                <element signature="e#9645#9646#0" expanded="true" />
-                <element signature="e#9792#10330#0" expanded="true" />
-                <element signature="e#10329#10330#0" expanded="true" />
-                <element signature="e#12836#13421#0" expanded="true" />
-                <element signature="e#13420#13421#0" expanded="true" />
-                <element signature="e#15767#16350#0" expanded="true" />
-                <element signature="e#16349#16350#0" expanded="true" />
-                <element signature="e#16677#16678#0" expanded="true" />
-                <element signature="e#17075#17482#0" expanded="true" />
-                <element signature="e#17481#17482#0" expanded="true" />
-                <element signature="e#17726#18126#0" expanded="true" />
-                <element signature="e#18125#18126#0" expanded="true" />
-                <element signature="e#18293#18294#0" expanded="true" />
+                <element signature="e#1537#1538#0" expanded="true" />
+                <element signature="e#1564#1565#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -143,15 +189,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
               <caret line="2" column="28" selection-end-line="23" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/ListSettingsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -190,7 +227,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/AddDeviceFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/User.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Tenant.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/BuildingHeating.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Admin.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Communication.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Camera.java" />
@@ -202,20 +238,15 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Lighting.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/PrivateCommunication.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/PublicCommunication.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/WaterHeater.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/user_type.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Sensors.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_shield_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/drawable/ic_building_black_24dp.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Apartment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Device.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MaintenanceDevice.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/SecurityDevice.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Building.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomSecurityList.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/xml/device_preferences.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/array.xml" />
@@ -225,10 +256,16 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_single.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/AirConditioner.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/HomeDevice.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/seekbar_dialog.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/seekbar_dialog2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/WaterHeater.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Device.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/BuildingHeating.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MaintenanceDevice.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Sensors.java" />
       </list>
     </option>
   </component>
@@ -402,7 +439,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15138593" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15138593" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -415,9 +452,9 @@
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.4989339" weight="0.32998884" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.32998884" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.49946696" weight="0.32998884" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50586355" side_tool="true" visible="true" weight="0.21962096" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50586355" side_tool="true" visible="true" weight="0.31661093" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49413645" visible="true" weight="0.21962096" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49413645" visible="true" weight="0.31661093" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Find" order="9" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -435,13 +472,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Camera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/DoorLock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-216">
@@ -471,13 +501,6 @@
             <element signature="e#217#218#0" expanded="true" />
             <element signature="e#245#246#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Lighting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -517,23 +540,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
           <caret line="6" column="39" lean-forward="true" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Sensors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-276">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/WaterHeater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#305#306#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,17 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Device.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-          <folding>
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1165#1166#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Apartment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="423">
@@ -636,36 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
           <caret line="23" column="2" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomSecurityList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1457#2033#0" expanded="true" />
-            <element signature="e#2032#2033#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-230">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#1425#2001#0" expanded="true" />
-            <element signature="e#2000#2001#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MaintenanceDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
         </state>
       </provider>
     </entry>
@@ -753,36 +718,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/HomeDevice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
-          <folding>
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#960#961#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1039#1040#0" expanded="true" />
-            <element signature="e#1073#1074#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_single.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
         <state relative-caret-position="676">
           <caret line="46" column="12" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="233" column="12" selection-start-line="233" selection-start-column="12" selection-end-line="233" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -809,39 +749,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Device.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1196">
+          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
+          <folding>
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1564#1565#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/WaterHeater.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#305#306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Lighting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/BuildingHeating.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/AirConditioner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
+        <state relative-caret-position="409">
           <caret line="52" selection-start-line="52" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/HomeDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="22" selection-start-line="22" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <element signature="e#876#877#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#960#961#0" expanded="true" />
+            <element signature="e#996#997#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MaintenanceDevice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1081">
+          <caret line="47" column="44" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#672#673#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="281" column="59" selection-start-line="281" selection-start-column="59" selection-end-line="281" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="255" column="85" lean-forward="true" selection-start-line="255" selection-start-column="85" selection-end-line="255" selection-end-column="85" />
+        <state relative-caret-position="391">
+          <caret line="257" selection-start-line="257" selection-end-line="261" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2934#18294#0" expanded="true" />
+            <element signature="e#2934#29399#0" expanded="true" />
             <element signature="e#3391#3739#0" expanded="true" />
             <element signature="e#3738#3739#0" expanded="true" />
-            <element signature="e#4257#16678#0" expanded="true" />
-            <element signature="e#6615#7198#0" expanded="true" />
-            <element signature="e#7197#7198#0" expanded="true" />
-            <element signature="e#8497#9646#0" expanded="true" />
-            <element signature="e#9645#9646#0" expanded="true" />
-            <element signature="e#9792#10330#0" expanded="true" />
-            <element signature="e#10329#10330#0" expanded="true" />
-            <element signature="e#12836#13421#0" expanded="true" />
-            <element signature="e#13420#13421#0" expanded="true" />
-            <element signature="e#15767#16350#0" expanded="true" />
-            <element signature="e#16349#16350#0" expanded="true" />
-            <element signature="e#16677#16678#0" expanded="true" />
-            <element signature="e#17075#17482#0" expanded="true" />
-            <element signature="e#17481#17482#0" expanded="true" />
-            <element signature="e#17726#18126#0" expanded="true" />
-            <element signature="e#18125#18126#0" expanded="true" />
-            <element signature="e#18293#18294#0" expanded="true" />
+            <element signature="e#4265#17229#0" expanded="true" />
+            <element signature="e#6623#7205#0" expanded="true" />
+            <element signature="e#7204#7205#0" expanded="true" />
+            <element signature="e#8499#9648#0" expanded="true" />
+            <element signature="e#9647#9648#0" expanded="true" />
+            <element signature="e#9794#10332#0" expanded="true" />
+            <element signature="e#10331#10332#0" expanded="true" />
+            <element signature="e#12840#13424#0" expanded="true" />
+            <element signature="e#13423#13424#0" expanded="true" />
+            <element signature="e#15781#16368#0" expanded="true" />
+            <element signature="e#16367#16368#0" expanded="true" />
+            <element signature="e#17228#17229#0" expanded="true" />
+            <element signature="e#17634#21420#0" expanded="true" />
+            <element signature="e#19986#20565#0" expanded="true" />
+            <element signature="e#20564#20565#0" expanded="true" />
+            <element signature="e#21419#21420#0" expanded="true" />
+            <element signature="e#23036#24181#0" expanded="true" />
+            <element signature="e#24180#24181#0" expanded="true" />
+            <element signature="e#29398#29399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1352">
+          <caret line="311" column="74" selection-start-line="311" selection-start-column="74" selection-end-line="311" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2298#22770#0" expanded="true" />
+            <element signature="e#2707#2935#0" expanded="true" />
+            <element signature="e#2934#2935#0" expanded="true" />
+            <element signature="e#3206#8980#0" expanded="true" />
+            <element signature="e#5420#5961#0" expanded="true" />
+            <element signature="e#5960#5961#0" expanded="true" />
+            <element signature="e#8168#8717#0" expanded="true" />
+            <element signature="e#8716#8717#0" expanded="true" />
+            <element signature="e#8979#8980#0" expanded="true" />
+            <element signature="e#9289#15933#0" expanded="true" />
+            <element signature="e#11517#12068#0" expanded="true" />
+            <element signature="e#12067#12068#0" expanded="true" />
+            <element signature="e#13276#14343#0" expanded="true" />
+            <element signature="e#14342#14343#0" expanded="true" />
+            <element signature="e#14481#14988#0" expanded="true" />
+            <element signature="e#14987#14988#0" expanded="true" />
+            <element signature="e#15932#15933#0" expanded="true" />
+            <element signature="e#16174#22508#0" expanded="true" />
+            <element signature="e#21704#21705#0" expanded="true" />
+            <element signature="e#22507#22508#0" expanded="true" />
+            <element signature="e#22769#22770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Sensors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomSecurityList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

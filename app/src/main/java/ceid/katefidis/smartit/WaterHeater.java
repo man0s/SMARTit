@@ -20,7 +20,7 @@ public class WaterHeater extends HomeDevice
     } 
   
     // method set
-    public void setMode(Integer newTemperature) 
+    public void setTemperature(Integer newTemperature)
     { 
         temperature = newTemperature; 
     } 
