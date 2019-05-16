@@ -38,7 +38,7 @@ public class MaintenanceDevice extends Device
             sprinkler = new Sprinklers(30, 50);
         } else if(settings.equals("heating")){
             heating = new BuildingHeating(27, "normal");
-        } else lighting = new Lighting("#303030", 55);
+        } else lighting = new Lighting(50, 136 ,253, 55);
 
     }
 

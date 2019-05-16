@@ -224,6 +224,7 @@ public class MainActivity extends AppCompatActivity {
         Sensors sensor = new Sensors(timeStamp, 26, 85, 0);
 
 
+
         if(!apartment.searchDevice(serialNumber)){ //an h suskeuh den uparxei sthn lista me ta devices
             //sensor.pickEnviromentalData(); //eisagwgh live data apo to perivalon;
 

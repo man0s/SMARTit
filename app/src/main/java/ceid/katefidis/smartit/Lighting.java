@@ -5,33 +5,51 @@ package ceid.katefidis.smartit;
 public class Lighting extends MaintenanceDevice
 { 
     // Instance Variables 
-    private String color;
+    private Integer colorR;
+    private Integer colorG;
+    private Integer colorB;
     private Integer hue;
   
     // Constructor Declaration of Class 
-    public Lighting(String color, Integer hue)
+    public Lighting(Integer colorR, Integer colorG, Integer colorB, Integer hue)
     { 
-        this.color = color;
+        this.colorR = colorR;
+        this.colorG = colorG;
+        this.colorB = colorB;
         this.hue = hue;
     }
-    // method get 
-    public String getColor() 
-    { 
-        return color; 
-    } 
-  
+    // method get
+    public Integer getColorR() {
+        return colorR;
+    }
+
+    public Integer getColorB() {
+        return colorB;
+    }
+
+    public Integer getColorG() {
+        return colorG;
+    }
+
     public Integer getHue()
     { 
         return hue; 
     }
 
     // method set
-    public void setColor(String newcolor) 
-    { 
-        color = newcolor; 
-    } 
+    public void setColorR(Integer colorR) {
+        this.colorR = colorR;
+    }
 
-    public void setHue(Integer newhue) 
+    public void setColorG(Integer colorG) {
+        this.colorG = colorG;
+    }
+
+    public void setColorB(Integer colorB) {
+        this.colorB = colorB;
+    }
+
+    public void setHue(Integer newhue)
     { 
         hue = newhue;
     } 

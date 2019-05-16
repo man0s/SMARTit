@@ -10,7 +10,6 @@ public class Sensors{
     private Sensors previousData;
     
     public Sensors(int Timestamp, int Temperature, int lighting_level, int smoke_detection){
-        this.previousData = new Sensors(this.Timestamp, this.Temperature, this.lighting_level, this.smoke_detection);
         this.Timestamp = Timestamp;
         this.Temperature = Temperature;
         this.lighting_level = lighting_level;

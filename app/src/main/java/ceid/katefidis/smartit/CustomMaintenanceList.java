@@ -276,25 +276,22 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                         public void onClick(DialogInterface dialog, int which) {
                             switch (which) {
                                 case 0: // color
-                                    //colorpicker todo
-                                    break;
-                                case 1: // hue
                                     AlertDialog.Builder builder0 = new AlertDialog.Builder(context);
                                     LayoutInflater inflater = context.getLayoutInflater();
-                                    View view=inflater.inflate(R.layout.seekbar_dialog,null);
-                                    builder0.setTitle("Hue");
+                                    View view=inflater.inflate(R.layout.seekbar_dialog3,null);
+                                    builder0.setTitle("Color Picker");
                                     builder0.setView(view);
-                                    final SeekBar seekBar = (SeekBar) view.findViewById(R.id.seekBar1);
-                                    final TextView seekProgress = (TextView) view.findViewById(R.id.seekProgress);
-                                    seekBar.setProgress(deviceList.get(position).getLighting().getHue());
-                                    seekProgress.setText(deviceList.get(position).getLighting().getHue() + " %");
-                                    seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                    final SeekBar seekBar0 = (SeekBar) view.findViewById(R.id.seekBar1);
+                                    final TextView seekProgress0 = (TextView) view.findViewById(R.id.seekProgress);
+                                    seekBar0.setProgress(deviceList.get(position).getLighting().getColorR());
+                                    seekProgress0.setText("R: " + deviceList.get(position).getLighting().getColorR());
+                                    seekBar0.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                                         int progressValue;
 
                                         @Override
                                         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                                             progressValue = progress;
-                                            seekProgress.setText(progress + " %");
+                                            seekProgress0.setText("R: " + progress);
                                         }
 
                                         @Override
@@ -303,20 +300,109 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
 
                                         @Override
                                         public void onStopTrackingTouch(SeekBar seekBar) {
-                                            seekProgress.setText(progressValue + " %");
+                                            seekProgress0.setText("R: " + progressValue );
+                                        }
+                                    });
+
+                                    final SeekBar seekBar01 = (SeekBar) view.findViewById(R.id.seekBar2);
+                                    final TextView seekProgress01 = (TextView) view.findViewById(R.id.seekProgress2);
+                                    seekBar01.setProgress(deviceList.get(position).getLighting().getColorG());
+                                    seekProgress01.setText("G: " + deviceList.get(position).getLighting().getColorG());
+                                    seekBar01.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                        int progressValue;
+
+                                        @Override
+                                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                            progressValue = progress;
+                                            seekProgress01.setText("G: " + progress);
+                                        }
+
+                                        @Override
+                                        public void onStartTrackingTouch(SeekBar seekBar) {
+                                        }
+
+                                        @Override
+                                        public void onStopTrackingTouch(SeekBar seekBar) {
+                                            seekProgress01.setText("G: " + progressValue);
+                                        }
+                                    });
+
+                                    final SeekBar seekBar02 = (SeekBar) view.findViewById(R.id.seekBar3);
+                                    final TextView seekProgress02 = (TextView) view.findViewById(R.id.seekProgress3);
+                                    seekBar02.setProgress(deviceList.get(position).getLighting().getColorB());
+                                    seekProgress02.setText("B: " + deviceList.get(position).getLighting().getColorB());
+                                    seekBar02.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                        int progressValue;
+
+                                        @Override
+                                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                            progressValue = progress;
+                                            seekProgress02.setText("B: " + progress);
+                                        }
+
+                                        @Override
+                                        public void onStartTrackingTouch(SeekBar seekBar) {
+                                        }
+
+                                        @Override
+                                        public void onStopTrackingTouch(SeekBar seekBar) {
+                                            seekProgress02.setText("B: " + progressValue);
                                         }
                                     });
 
                                     builder0.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                                         @Override
                                         public void onClick(DialogInterface dialogInterface, int i) {
-                                            deviceList.get(position).getLighting().setHue(seekBar.getProgress());
-                                            Toast.makeText(context, "Hue has been set to " + seekBar.getProgress() + "%!", Toast.LENGTH_SHORT).show();
+                                            deviceList.get(position).getLighting().setColorR(seekBar0.getProgress());
+                                            deviceList.get(position).getLighting().setColorG(seekBar01.getProgress());
+                                            deviceList.get(position).getLighting().setColorB(seekBar02.getProgress());
+                                            Toast.makeText(context, "Color has been set to (" + deviceList.get(position).getLighting().getColorR()
+                                                    + ", " + deviceList.get(position).getLighting().getColorG() + ", " + deviceList.get(position).getLighting().getColorB() + ")!", Toast.LENGTH_SHORT).show();
                                         }
                                     });
 
                                     AlertDialog alertDialog0 = builder0.create();
                                     alertDialog0.show();
+                                    break;
+                                case 1: // hue
+                                    AlertDialog.Builder builder1 = new AlertDialog.Builder(context);
+                                    LayoutInflater inflater1 = context.getLayoutInflater();
+                                    View view1=inflater1.inflate(R.layout.seekbar_dialog,null);
+                                    builder1.setTitle("Hue");
+                                    builder1.setView(view1);
+                                    final SeekBar seekBar1 = (SeekBar) view1.findViewById(R.id.seekBar1);
+                                    final TextView seekProgress1 = (TextView) view1.findViewById(R.id.seekProgress);
+                                    seekBar1.setProgress(deviceList.get(position).getLighting().getHue());
+                                    seekProgress1.setText(deviceList.get(position).getLighting().getHue() + " %");
+                                    seekBar1.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                        int progressValue;
+
+                                        @Override
+                                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                            progressValue = progress;
+                                            seekProgress1.setText(progress + " %");
+                                        }
+
+                                        @Override
+                                        public void onStartTrackingTouch(SeekBar seekBar) {
+                                        }
+
+                                        @Override
+                                        public void onStopTrackingTouch(SeekBar seekBar) {
+                                            seekProgress1.setText(progressValue + " %");
+                                        }
+                                    });
+
+                                    builder1.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            deviceList.get(position).getLighting().setHue(seekBar1.getProgress());
+                                            Toast.makeText(context, "Hue has been set to " + seekBar1.getProgress() + "%!", Toast.LENGTH_SHORT).show();
+                                        }
+                                    });
+
+                                    AlertDialog alertDialog1 = builder1.create();
+                                    alertDialog1.show();
                                     break;
                                 case 2: // auto
                                     //automath epilogh, pairnei ta data twn sensorwn kai ginetai automath eisagwgh twn rithmisewn
