@@ -81,4 +81,12 @@ public class Device
     public Sensors getSensorData() {
         return data;
     }
+
+    public Integer getOnline_time() {
+        return online_time;
+    }
+
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
+    }
 }

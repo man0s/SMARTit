@@ -3,6 +3,7 @@ package ceid.katefidis.smartit;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.os.CountDownTimer;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -72,7 +73,7 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
 
                 String[] settings = {};
                 if (deviceList.get(position).getSettings().equals("sprinkler")) {
-                    settings = new String[]{"Speed", "Pressure"};
+                    settings = new String[]{"Speed", "Pressure", "Timer"};
 
                     builder.setItems(settings, new DialogInterface.OnClickListener() {
                         @Override
@@ -158,6 +159,71 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                     AlertDialog alertDialog1 = builder1.create();
                                     alertDialog1.show();
                                     break;
+                                case 2:
+                                    AlertDialog.Builder builder5 = new AlertDialog.Builder(context);
+                                    LayoutInflater inflater5 = context.getLayoutInflater();
+                                    View view5=inflater5.inflate(R.layout.seekbar_dialog4,null);
+                                    builder5.setTitle("Timer");
+                                    builder5.setView(view5);
+                                    final SeekBar seekBar5 = (SeekBar) view5.findViewById(R.id.seekBar1);
+                                    final TextView seekProgress5 = (TextView) view5.findViewById(R.id.seekProgress);
+                                    seekBar5.setProgress(deviceList.get(position).getOnline_time());
+                                    seekProgress5.setText(deviceList.get(position).getOnline_time() + " seconds");
+                                    seekBar5.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                        int progressValue;
+
+                                        @Override
+                                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                            progressValue = progress;
+                                            seekProgress5.setText(progress + " seconds");
+                                        }
+
+                                        @Override
+                                        public void onStartTrackingTouch(SeekBar seekBar) {
+                                        }
+
+                                        @Override
+                                        public void onStopTrackingTouch(SeekBar seekBar) {
+                                            seekProgress5.setText(progressValue + " seconds");
+                                        }
+                                    });
+
+                                    builder5.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            deviceList.get(position).setOnlineTime(seekBar5.getProgress());
+                                            Toast.makeText(context, "Timer has been set to " + deviceList.get(position).getOnline_time() + " seconds!", Toast.LENGTH_SHORT).show();
+
+                                            AlertDialog.Builder builderTimer = new AlertDialog.Builder(context);
+                                            final AlertDialog timerDialog = builderTimer.create();
+                                            timerDialog.setTitle("Timer");
+                                            timerDialog.setMessage("The device will shutdown in 00:10");
+                                            timerDialog.show();   //
+
+                                            new CountDownTimer(deviceList.get(position).getOnline_time() * 1000, 1000) {
+                                                @Override
+                                                public void onTick(long millisUntilFinished) {
+                                                    deviceList.get(position).setOnlineTime((int) (long)(millisUntilFinished/1000));
+                                                    timerDialog.setMessage("The device will shutdown in "+ (millisUntilFinished/1000) + " seconds!");
+                                                }
+
+                                                @Override
+                                                public void onFinish() {
+                                                    deviceList.get(position).setOnlineTime(0);
+                                                    deviceList.get(position).setEnabled(false);
+                                                    notifyDataSetChanged(); //refresh list data
+                                                    timerDialog.setMessage("The device has been shutdown!");
+                                                    Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }.start();
+
+                                        }
+                                    });
+
+                                    AlertDialog alertDialog5 = builder5.create();
+                                    alertDialog5.show();
+
+                                    break;
                             }
                         }
                     });
@@ -165,7 +231,7 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 } else if (deviceList.get(position).getSettings().equals("heating")) {
-                    settings = new String[]{"Temperature", "Mode", "Auto"};
+                    settings = new String[]{"Temperature", "Mode", "Timer", "Auto"};
 
                     builder.setItems(settings, new DialogInterface.OnClickListener() {
                         @Override
@@ -257,6 +323,71 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                     dialog1.show();
                                     break;
                                 case 2:
+                                    AlertDialog.Builder builder5 = new AlertDialog.Builder(context);
+                                    LayoutInflater inflater5 = context.getLayoutInflater();
+                                    View view5=inflater5.inflate(R.layout.seekbar_dialog4,null);
+                                    builder5.setTitle("Timer");
+                                    builder5.setView(view5);
+                                    final SeekBar seekBar5 = (SeekBar) view5.findViewById(R.id.seekBar1);
+                                    final TextView seekProgress5 = (TextView) view5.findViewById(R.id.seekProgress);
+                                    seekBar5.setProgress(deviceList.get(position).getOnline_time());
+                                    seekProgress5.setText(deviceList.get(position).getOnline_time() + " seconds");
+                                    seekBar5.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                        int progressValue;
+
+                                        @Override
+                                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                            progressValue = progress;
+                                            seekProgress5.setText(progress + " seconds");
+                                        }
+
+                                        @Override
+                                        public void onStartTrackingTouch(SeekBar seekBar) {
+                                        }
+
+                                        @Override
+                                        public void onStopTrackingTouch(SeekBar seekBar) {
+                                            seekProgress5.setText(progressValue + " seconds");
+                                        }
+                                    });
+
+                                    builder5.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            deviceList.get(position).setOnlineTime(seekBar5.getProgress());
+                                            Toast.makeText(context, "Timer has been set to " + deviceList.get(position).getOnline_time() + " seconds!", Toast.LENGTH_SHORT).show();
+
+                                            AlertDialog.Builder builderTimer = new AlertDialog.Builder(context);
+                                            final AlertDialog timerDialog = builderTimer.create();
+                                            timerDialog.setTitle("Timer");
+                                            timerDialog.setMessage("The device will shutdown in 00:10");
+                                            timerDialog.show();   //
+
+                                            new CountDownTimer(deviceList.get(position).getOnline_time() * 1000, 1000) {
+                                                @Override
+                                                public void onTick(long millisUntilFinished) {
+                                                    deviceList.get(position).setOnlineTime((int) (long)(millisUntilFinished/1000));
+                                                    timerDialog.setMessage("The device will shutdown in "+ (millisUntilFinished/1000) + " seconds!");
+                                                }
+
+                                                @Override
+                                                public void onFinish() {
+                                                    deviceList.get(position).setOnlineTime(0);
+                                                    deviceList.get(position).setEnabled(false);
+                                                    notifyDataSetChanged(); //refresh list data
+                                                    timerDialog.setMessage("The device has been shutdown!");
+                                                    Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }.start();
+
+                                        }
+                                    });
+
+                                    AlertDialog alertDialog5 = builder5.create();
+                                    alertDialog5.show();
+
+                                    break;
+                                case 3:
                                     //automath epilogh, pairnei ta data twn sensorwn kai ginetai automath eisagwgh twn rithmisewn
                                     deviceList.get(position).getHeating().setTemperature(deviceList.get(position).getSensorData().getTemperature());
                                     Toast.makeText(context, "Automatic Temperature " + deviceList.get(position).getHeating().getTemperature() + "℃!", Toast.LENGTH_SHORT).show();
@@ -269,7 +400,7 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                     dialog.show();
 
                 } else {
-                    settings = new String[]{"Color", "Hue", "Auto"};
+                    settings = new String[]{"Color", "Hue", "Timer", "Auto"};
 
                     builder.setItems(settings, new DialogInterface.OnClickListener() {
                         @Override
@@ -404,7 +535,72 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                     AlertDialog alertDialog1 = builder1.create();
                                     alertDialog1.show();
                                     break;
-                                case 2: // auto
+                                case 2:
+                                    AlertDialog.Builder builder5 = new AlertDialog.Builder(context);
+                                    LayoutInflater inflater5 = context.getLayoutInflater();
+                                    View view5=inflater5.inflate(R.layout.seekbar_dialog4,null);
+                                    builder5.setTitle("Timer");
+                                    builder5.setView(view5);
+                                    final SeekBar seekBar5 = (SeekBar) view5.findViewById(R.id.seekBar1);
+                                    final TextView seekProgress5 = (TextView) view5.findViewById(R.id.seekProgress);
+                                    seekBar5.setProgress(deviceList.get(position).getOnline_time());
+                                    seekProgress5.setText(deviceList.get(position).getOnline_time() + " seconds");
+                                    seekBar5.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                                        int progressValue;
+
+                                        @Override
+                                        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                                            progressValue = progress;
+                                            seekProgress5.setText(progress + " seconds");
+                                        }
+
+                                        @Override
+                                        public void onStartTrackingTouch(SeekBar seekBar) {
+                                        }
+
+                                        @Override
+                                        public void onStopTrackingTouch(SeekBar seekBar) {
+                                            seekProgress5.setText(progressValue + " seconds");
+                                        }
+                                    });
+
+                                    builder5.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                            deviceList.get(position).setOnlineTime(seekBar5.getProgress());
+                                            Toast.makeText(context, "Timer has been set to " + deviceList.get(position).getOnline_time() + " seconds!", Toast.LENGTH_SHORT).show();
+
+                                            AlertDialog.Builder builderTimer = new AlertDialog.Builder(context);
+                                            final AlertDialog timerDialog = builderTimer.create();
+                                            timerDialog.setTitle("Timer");
+                                            timerDialog.setMessage("The device will shutdown in 00:10");
+                                            timerDialog.show();   //
+
+                                            new CountDownTimer(deviceList.get(position).getOnline_time() * 1000, 1000) {
+                                                @Override
+                                                public void onTick(long millisUntilFinished) {
+                                                    deviceList.get(position).setOnlineTime((int) (long)(millisUntilFinished/1000));
+                                                    timerDialog.setMessage("The device will shutdown in "+ (millisUntilFinished/1000) + " seconds!");
+                                                }
+
+                                                @Override
+                                                public void onFinish() {
+                                                    deviceList.get(position).setOnlineTime(0);
+                                                    deviceList.get(position).setEnabled(false);
+                                                    notifyDataSetChanged(); //refresh list data
+                                                    timerDialog.setMessage("The device has been shutdown!");
+                                                    Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                }
+                                            }.start();
+
+                                        }
+                                    });
+
+                                    AlertDialog alertDialog5 = builder5.create();
+                                    alertDialog5.show();
+
+                                    break;
+                                case 3: // auto
                                     //automath epilogh, pairnei ta data twn sensorwn kai ginetai automath eisagwgh twn rithmisewn
                                     deviceList.get(position).getLighting().setHue(deviceList.get(position).getSensorData().getLighting());
                                     Toast.makeText(context, "Automatic Hue " + deviceList.get(position).getLighting().getHue() + "%!", Toast.LENGTH_SHORT).show();

@@ -26,5 +26,15 @@ public class SecurityDevice extends Device
     public void setSettings(String  test)
     { 
         
-    } 
+    }
+
+    @Override
+    public void setOnlineTime(Integer newOnlineTime) {
+        super.setOnlineTime(newOnlineTime);
+    }
+
+    @Override
+    public Integer getOnline_time() {
+        return super.getOnline_time();
+    }
 }
