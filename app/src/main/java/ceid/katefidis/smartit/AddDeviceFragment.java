@@ -1,14 +1,11 @@
 package ceid.katefidis.smartit;
 
 
-import android.support.design.widget.TextInputEditText;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 public class AddDeviceFragment extends Fragment {
 

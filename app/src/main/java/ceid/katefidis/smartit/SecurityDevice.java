@@ -4,7 +4,9 @@ package ceid.katefidis.smartit;
 
 public class SecurityDevice extends Device
 { 
-    // Instance Variables 
+    // Instance Variables
+    private Camera camera;
+    private DoorLock doorlock;
   
     // Constructor Declaration of Class
 
@@ -17,15 +19,30 @@ public class SecurityDevice extends Device
     }
   
     // method get 
-    public String getSettings() 
-    { 
-        return null;
-    } 
-  
+    public String getSettings()
+    {
+        if(camera != null)  return "camera";
+        else if(doorlock !=null) return "doorlock";
+        else return null;
+    }
+
+    public Camera getCamera() {
+        return camera;
+    }
+
+    public DoorLock getDoorlock() {
+        return doorlock;
+    }
+
     // method set
-    public void setSettings(String  test)
-    { 
-        
+    public void setSettings(String settings)
+    {
+        if(settings.equals("camera")){
+            camera = new Camera(0, 129, 0);
+        } else if(settings.equals("doorlock")) {
+            doorlock = new DoorLock(true, 0000, false);
+        }
+
     }
 
     @Override

@@ -119,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
         } else if(userType.equals("security")){
             navigation.getMenu().findItem(R.id.navigation_home).setTitle("Security");
             navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_shield_black_24dp);
+        } else {
+            navigation.getMenu().findItem(R.id.navigation_home).setTitle("Home");
+            navigation.getMenu().findItem(R.id.navigation_home).setIcon(R.drawable.ic_home_black_24dp);
         }
 
         Log.d("UserType", userType);
@@ -292,7 +295,17 @@ public class MainActivity extends AppCompatActivity {
 
                 //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
-                building.addSecurityDevice(new SecurityDevice(serialNumber, 0, serialNumber, sensor, -1, true));
+                SecurityDevice device = new SecurityDevice(serialNumber, 0, serialNumber, sensor, -1, true);
+
+                //An to serialnumberarxizei me 1, einai camera
+                if(serialNumber.charAt(0) == '1'){
+                    device.setSettings("camera");
+                    //Alliws, einai doorlock
+                } else {
+                    device.setSettings("doorlock");
+                }
+
+                building.addSecurityDevice(device);
                 customSecurityList.notifyDataSetChanged(); //refresh list
                 String addText = "Device #" + serialNumber + " added!";
                 Toast.makeText(MainActivity.this, addText, addText.length()).show();
