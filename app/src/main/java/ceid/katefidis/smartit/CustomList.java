@@ -324,10 +324,27 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                             }
                         });
 
-                        builder.setPositiveButton("Remove", new DialogInterface.OnClickListener() {
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                deviceList.remove(position);
-                                notifyDataSetChanged();
+                            }
+                        });
+
+                        builder.setNeutralButton("Remove", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                new AlertDialog.Builder(context)
+                                        .setTitle("Remove Device")
+                                        .setMessage("Do you want to remove this device?")
+                                        .setNegativeButton("Cancel", null) // dismisses by default
+                                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                            @Override public void onClick(DialogInterface dialog, int which) {
+                                                deviceList.remove(position);
+                                                notifyDataSetChanged();
+                                            }
+                                        })
+                                        .create()
+                                        .show();
+
                             }
                         });
 
@@ -457,6 +474,30 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                             }
                         });
 
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+
+                        builder.setNeutralButton("Remove", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                new AlertDialog.Builder(context)
+                                        .setTitle("Remove Device")
+                                        .setMessage("Do you want to remove this device?")
+                                        .setNegativeButton("Cancel", null) // dismisses by default
+                                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                            @Override public void onClick(DialogInterface dialog, int which) {
+                                                deviceList.remove(position);
+                                                notifyDataSetChanged();
+                                            }
+                                        })
+                                        .create()
+                                        .show();
+
+                            }
+                        });
+
                         AlertDialog dialog = builder.create();
                         dialog.show();
                     } else {
@@ -577,6 +618,30 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
 
                                         break;
                                 }
+                            }
+                        });
+
+                        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                            }
+                        });
+
+                        builder.setNeutralButton("Remove", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+
+                                new AlertDialog.Builder(context)
+                                        .setTitle("Remove Device")
+                                        .setMessage("Do you want to remove this device?")
+                                        .setNegativeButton("Cancel", null) // dismisses by default
+                                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                            @Override public void onClick(DialogInterface dialog, int which) {
+                                                deviceList.remove(position);
+                                                notifyDataSetChanged();
+                                            }
+                                        })
+                                        .create()
+                                        .show();
+
                             }
                         });
 

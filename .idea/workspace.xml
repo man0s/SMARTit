@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="384">
-              <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,12 +41,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="95" column="92" selection-start-line="95" selection-start-column="92" selection-end-line="95" selection-end-column="92" />
+            <state relative-caret-position="200">
+              <caret line="351" column="61" selection-start-line="351" selection-start-column="45" selection-end-line="351" selection-end-column="61" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#21918#22129#0" expanded="true" />
-                <element signature="e#22128#22129#0" expanded="true" />
+                <element signature="e#22158#23214#0" expanded="true" />
+                <element signature="e#22670#23057#0" expanded="true" />
+                <element signature="e#23056#23057#0" expanded="true" />
+                <element signature="e#23213#23214#0" expanded="true" />
+                <element signature="e#32575#33631#0" expanded="true" />
+                <element signature="e#33087#33474#0" expanded="true" />
+                <element signature="e#33473#33474#0" expanded="true" />
+                <element signature="e#33630#33631#0" expanded="true" />
+                <element signature="e#42616#43672#0" expanded="true" />
+                <element signature="e#43128#43515#0" expanded="true" />
+                <element signature="e#43514#43515#0" expanded="true" />
+                <element signature="e#43671#43672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="556">
+              <caret line="443" column="23" selection-start-line="443" selection-start-column="23" selection-end-line="443" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#13943#14939#0" expanded="true" />
+                <element signature="e#14431#14798#0" expanded="true" />
+                <element signature="e#14797#14798#0" expanded="true" />
+                <element signature="e#14938#14939#0" expanded="true" />
+                <element signature="e#26822#27818#0" expanded="true" />
+                <element signature="e#27310#27677#0" expanded="true" />
+                <element signature="e#27676#27677#0" expanded="true" />
+                <element signature="e#27817#27818#0" expanded="true" />
+                <element signature="e#42714#43710#0" expanded="true" />
+                <element signature="e#43202#43569#0" expanded="true" />
+                <element signature="e#43568#43569#0" expanded="true" />
+                <element signature="e#43709#43710#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -129,6 +163,8 @@
       <find>OnBack</find>
       <find>ArrayAdapter</find>
       <find>shutdown</find>
+      <find>builder.create()</find>
+      <find>builder.create();</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -184,9 +220,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Device.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Building.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Apartment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java" />
       </list>
     </option>
   </component>
@@ -677,16 +713,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="591" column="174" selection-start-line="591" selection-start-column="174" selection-end-line="591" selection-end-column="174" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Tenant.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -754,18 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="95" column="92" selection-start-line="95" selection-start-column="92" selection-end-line="95" selection-end-column="92" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#21918#22129#0" expanded="true" />
-            <element signature="e#22128#22129#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/HomeDevice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-598">
@@ -788,9 +802,53 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
-          <caret line="157" lean-forward="true" selection-start-line="157" selection-end-line="157" />
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="351" column="61" selection-start-line="351" selection-start-column="45" selection-end-line="351" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#22158#23214#0" expanded="true" />
+            <element signature="e#22670#23057#0" expanded="true" />
+            <element signature="e#23056#23057#0" expanded="true" />
+            <element signature="e#23213#23214#0" expanded="true" />
+            <element signature="e#32575#33631#0" expanded="true" />
+            <element signature="e#33087#33474#0" expanded="true" />
+            <element signature="e#33473#33474#0" expanded="true" />
+            <element signature="e#33630#33631#0" expanded="true" />
+            <element signature="e#42616#43672#0" expanded="true" />
+            <element signature="e#43128#43515#0" expanded="true" />
+            <element signature="e#43514#43515#0" expanded="true" />
+            <element signature="e#43671#43672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomMaintenanceList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="556">
+          <caret line="443" column="23" selection-start-line="443" selection-start-column="23" selection-end-line="443" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#13943#14939#0" expanded="true" />
+            <element signature="e#14431#14798#0" expanded="true" />
+            <element signature="e#14797#14798#0" expanded="true" />
+            <element signature="e#14938#14939#0" expanded="true" />
+            <element signature="e#26822#27818#0" expanded="true" />
+            <element signature="e#27310#27677#0" expanded="true" />
+            <element signature="e#27676#27677#0" expanded="true" />
+            <element signature="e#27817#27818#0" expanded="true" />
+            <element signature="e#42714#43710#0" expanded="true" />
+            <element signature="e#43202#43569#0" expanded="true" />
+            <element signature="e#43568#43569#0" expanded="true" />
+            <element signature="e#43709#43710#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -227,6 +227,29 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                             }
                         }
                     });
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    });
+
+                    builder.setNeutralButton("Remove", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            new AlertDialog.Builder(context)
+                                    .setTitle("Remove Device")
+                                    .setMessage("Do you want to remove this device?")
+                                    .setNegativeButton("Cancel", null) // dismisses by default
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        @Override public void onClick(DialogInterface dialog, int which) {
+                                            deviceList.remove(position);
+                                            notifyDataSetChanged();
+                                        }
+                                    })
+                                    .create()
+                                    .show();
+
+                        }
+                    });
 
                     AlertDialog dialog = builder.create();
                     dialog.show();
@@ -393,6 +416,30 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                     Toast.makeText(context, "Automatic Temperature " + deviceList.get(position).getHeating().getTemperature() + "℃!", Toast.LENGTH_SHORT).show();
                                     break;
                             }
+                        }
+                    });
+
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    });
+
+                    builder.setNeutralButton("Remove", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            new AlertDialog.Builder(context)
+                                    .setTitle("Remove Device")
+                                    .setMessage("Do you want to remove this device?")
+                                    .setNegativeButton("Cancel", null) // dismisses by default
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        @Override public void onClick(DialogInterface dialog, int which) {
+                                            deviceList.remove(position);
+                                            notifyDataSetChanged();
+                                        }
+                                    })
+                                    .create()
+                                    .show();
+
                         }
                     });
 
@@ -606,6 +653,29 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                     Toast.makeText(context, "Automatic Hue " + deviceList.get(position).getLighting().getHue() + "%!", Toast.LENGTH_SHORT).show();
                                     break;
                             }
+                        }
+                    });
+                    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int id) {
+                        }
+                    });
+
+                    builder.setNeutralButton("Remove", new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            new AlertDialog.Builder(context)
+                                    .setTitle("Remove Device")
+                                    .setMessage("Do you want to remove this device?")
+                                    .setNegativeButton("Cancel", null) // dismisses by default
+                                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                        @Override public void onClick(DialogInterface dialog, int which) {
+                                            deviceList.remove(position);
+                                            notifyDataSetChanged();
+                                        }
+                                    })
+                                    .create()
+                                    .show();
+
                         }
                     });
 
