@@ -140,15 +140,18 @@ public class MainActivity extends AppCompatActivity {
 
             //when the user clicks the scan qr button
             Button adddeviceButton = (Button) findViewById(R.id.adddeviceButton);
+            final CustomList customList = new CustomList(MainActivity.this, apartment.getDeviceList());
+            final CustomMaintenanceList customMaintenanceList = new CustomMaintenanceList(MainActivity.this, building.getMaintanceDeviceList());
+            final CustomSecurityList customSecurityList = new CustomSecurityList(MainActivity.this, building.getSecurityDeviceList());
 
             adddeviceButton.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
                     if(userType.equals("tenant")) {
-                        addDeviceTenant(view, apartment);
+                        addDeviceTenant(view, apartment, customList);
                     } else {
-                        addDeviceBuilding(view, userType, building);
+                        addDeviceBuilding(view, userType, building, customMaintenanceList, customSecurityList);
                     }
                 }
             });
@@ -171,11 +174,11 @@ public class MainActivity extends AppCompatActivity {
 
         if(userType.equals("tenant"))
         {
-            lstItems.setAdapter(new CustomList(MainActivity.this, apartment.getDeviceList()));
+            lstItems.setAdapter(customList);
         } else if (userType.equals("admin")){
-            lstItems.setAdapter(new CustomMaintenanceList(MainActivity.this, building.getMaintanceDeviceList()));
+            lstItems.setAdapter(customMaintenanceList);
         } else {
-            lstItems.setAdapter(new CustomSecurityList(MainActivity.this, building.getSecurityDeviceList()));
+            lstItems.setAdapter(customSecurityList);
         }
 
 //        lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -204,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the tenant taps the Add Device button */
-    public void addDeviceTenant(View view, Apartment apartment) {
+    public void addDeviceTenant(View view, Apartment apartment, CustomList customList) {
         TextInputEditText serialnumberText = findViewById(R.id.serialnumberInput);
         String serialNumber = serialnumberText.getText().toString();
         int timeStamp = (int) (new Date().getTime()/1000);
@@ -231,6 +234,7 @@ public class MainActivity extends AppCompatActivity {
             } else device.setSettings("cleaningrobot");
 
             apartment.addHomeDevice(device);
+            customList.notifyDataSetChanged(); //refresh
 
             String addText = "Device #" + serialNumber + " added!";
             Toast.makeText(MainActivity.this, addText, addText.length()).show();
@@ -248,7 +252,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /** Called when the tenant taps the Add Device button */
-    public void addDeviceBuilding(View view, String userType, Building building) {
+    public void addDeviceBuilding(View view, String userType, Building building, CustomMaintenanceList customMaintenanceList, CustomSecurityList customSecurityList) {
         TextInputEditText serialnumberText = findViewById(R.id.serialnumberInput);
         String serialNumber = serialnumberText.getText().toString();
         int timeStamp = (int) (new Date().getTime()/1000);
@@ -273,6 +277,7 @@ public class MainActivity extends AppCompatActivity {
                 } else device.setSettings("lighting");
 
                 building.addMaintenceDevice(device);
+                customMaintenanceList.notifyDataSetChanged(); //refresh list
                 String addText = "Device #" + serialNumber + " added!";
                 Toast.makeText(MainActivity.this, addText, addText.length()).show();
                 Log.i("info", "Device #" + serialNumber + " added!");
@@ -288,6 +293,7 @@ public class MainActivity extends AppCompatActivity {
                 //Elegxos apo remote server gia to an uparxei to sygkekrimeno serial kai lhpsh twn stoixeiwn(px onoma) ths sugkekrimenhs suskeus
 
                 building.addSecurityDevice(new SecurityDevice(serialNumber, 0, serialNumber, sensor, -1, true));
+                customSecurityList.notifyDataSetChanged(); //refresh list
                 String addText = "Device #" + serialNumber + " added!";
                 Toast.makeText(MainActivity.this, addText, addText.length()).show();
                 Log.i("info", "Device #" + serialNumber + " added!");

@@ -46,6 +46,9 @@ public class Building{
   public void addApartment(Apartment obj){apartment_list.add(obj);}
   public void addMaintenceDevice(MaintenanceDevice obj){maintence_device_list.add(obj);}
   public void addSecurityDevice(SecurityDevice obj){security_device_list.add(obj);}
+  public void deleteApartment(Apartment obj){apartment_list.remove(obj);}
+  public void deleteMaintenceDevice(MaintenanceDevice obj){maintence_device_list.remove(obj);}
+  public void deleteSecurityDevice(SecurityDevice obj){security_device_list.remove(obj);}
 
   public ArrayList<MaintenanceDevice> getMaintanceDeviceList(){ return maintence_device_list; }
   public ArrayList<SecurityDevice> getSecurityDeviceList(){ return security_device_list; }

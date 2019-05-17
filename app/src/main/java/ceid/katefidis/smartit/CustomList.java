@@ -304,7 +304,7 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                                         deviceList.get(position).setEnabled(false);
                                                         notifyDataSetChanged(); //refresh list data
                                                         timerDialog.setMessage("The device has been shutdown!");
-                                                        Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(context, "Device #" + deviceList.get(position).getID() + " has been shutdown!", Toast.LENGTH_SHORT).show();
                                                     }
                                                 }.start();
 
@@ -321,6 +321,13 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                         Toast.makeText(context, "Automatic Temperature " + deviceList.get(position).getAirconditioner().getTemperature() + "℃!", Toast.LENGTH_SHORT).show();
                                         break;
                                 }
+                            }
+                        });
+
+                        builder.setPositiveButton("Remove", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                deviceList.remove(position);
+                                notifyDataSetChanged();
                             }
                         });
 
@@ -430,7 +437,7 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                                         deviceList.get(position).setEnabled(false);
                                                         notifyDataSetChanged(); //refresh list data
                                                         timerDialog.setMessage("The device has been shutdown!");
-                                                        Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(context, "Device #" + deviceList.get(position).getID() + " has been shutdown!", Toast.LENGTH_SHORT).show();
                                                     }
                                                 }.start();
 
@@ -558,7 +565,7 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
                                                         deviceList.get(position).setEnabled(false);
                                                         notifyDataSetChanged(); //refresh list data
                                                         timerDialog.setMessage("The device has been shutdown!");
-                                                        Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                        Toast.makeText(context, "Device #" + deviceList.get(position).getID() + " has been shutdown!", Toast.LENGTH_SHORT).show();
                                                     }
                                                 }.start();
 

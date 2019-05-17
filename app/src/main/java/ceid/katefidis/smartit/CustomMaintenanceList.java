@@ -213,7 +213,7 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                                     deviceList.get(position).setEnabled(false);
                                                     notifyDataSetChanged(); //refresh list data
                                                     timerDialog.setMessage("The device has been shutdown!");
-                                                    Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(context, "Device #" + deviceList.get(position).getID() + " has been shutdown!", Toast.LENGTH_SHORT).show();
                                                 }
                                             }.start();
 
@@ -376,7 +376,7 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                                     deviceList.get(position).setEnabled(false);
                                                     notifyDataSetChanged(); //refresh list data
                                                     timerDialog.setMessage("The device has been shutdown!");
-                                                    Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(context, "Device #" + deviceList.get(position).getID() + " has been shutdown!", Toast.LENGTH_SHORT).show();
                                                 }
                                             }.start();
 
@@ -589,7 +589,7 @@ public class CustomMaintenanceList extends ArrayAdapter<MaintenanceDevice> {
                                                     deviceList.get(position).setEnabled(false);
                                                     notifyDataSetChanged(); //refresh list data
                                                     timerDialog.setMessage("The device has been shutdown!");
-                                                    Toast.makeText(context, "The device has been shutdown!", Toast.LENGTH_SHORT).show();
+                                                    Toast.makeText(context, "Device #" + deviceList.get(position).getID() + " has been shutdown!", Toast.LENGTH_SHORT).show();
                                                 }
                                             }.start();
 
