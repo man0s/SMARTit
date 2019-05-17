@@ -9,8 +9,4 @@ public class Tenant extends User
     {
         super(id, full_name, email, username, password, phone_number);
     }
-    // Instance Variables 
-  
-    // Constructor Declaration of Class 
-
 }

@@ -10,8 +10,6 @@ public class Building{
   private ArrayList<MaintenanceDevice> maintence_device_list;
   private ArrayList<SecurityDevice> security_device_list;
 
-  
-
   Building(){}
 
   Building(String p_address, Admin p_admin, SecurityStaff p_security){
@@ -42,15 +40,15 @@ public class Building{
   public String getAddress(){return address;}
   public Admin getAdmin(){return the_admin;}
   public SecurityStaff getSecurity(){return the_security;}
+  public ArrayList<MaintenanceDevice> getMaintanceDeviceList(){ return maintence_device_list; }
+  public ArrayList<SecurityDevice> getSecurityDeviceList(){ return security_device_list; }
 
   public void addApartment(Apartment obj){apartment_list.add(obj);}
   public void addMaintenceDevice(MaintenanceDevice obj){maintence_device_list.add(obj);}
   public void addSecurityDevice(SecurityDevice obj){security_device_list.add(obj);}
+
   public void deleteApartment(Apartment obj){apartment_list.remove(obj);}
   public void deleteMaintenceDevice(MaintenanceDevice obj){maintence_device_list.remove(obj);}
   public void deleteSecurityDevice(SecurityDevice obj){security_device_list.remove(obj);}
-
-  public ArrayList<MaintenanceDevice> getMaintanceDeviceList(){ return maintence_device_list; }
-  public ArrayList<SecurityDevice> getSecurityDeviceList(){ return security_device_list; }
 
 }

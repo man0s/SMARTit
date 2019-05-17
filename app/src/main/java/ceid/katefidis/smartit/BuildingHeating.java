@@ -21,8 +21,7 @@ public class BuildingHeating extends MaintenanceDevice
     public String getMode() 
     { 
         return mode; 
-    } 
-  
+    }
     public Integer getTemperature()
     { 
         return temperature; 
@@ -32,8 +31,7 @@ public class BuildingHeating extends MaintenanceDevice
     public void setMode(String newmode) 
     { 
         mode = newmode; 
-    } 
-
+    }
     public void setTemperature(Integer newtemperature) 
     { 
         temperature = newtemperature;

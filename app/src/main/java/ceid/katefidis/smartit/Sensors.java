@@ -16,9 +16,6 @@ public class Sensors{
         this.smoke_detection = smoke_detection;
     }
 
-   
-    
-
     public int getTimestamp(){return Timestamp;}
     public int getTemperature(){return Temperature;}
     public int getLighting(){return lighting_level;}

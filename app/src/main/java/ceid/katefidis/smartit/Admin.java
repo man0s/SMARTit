@@ -3,8 +3,7 @@ package ceid.katefidis.smartit;
 //Class Declaration
   
 public class Admin extends User
-{ 
-    // Instance Variables 
+{
   
     // Constructor Declaration of Class 
 

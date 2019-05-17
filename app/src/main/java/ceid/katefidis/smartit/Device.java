@@ -30,30 +30,20 @@ public class Device
     { 
        device_ID = newID; 
     }
-
     public void setOnlineTime(Integer newOnlineTime) 
     { 
        online_time = newOnlineTime;
     }
-
     public void setName(String newName) 
     { 
        device_name = newName;
     }
-
-    public void saveSettings(Boolean saveSett) 
-    { 
-       //todo
-    }
-
     public void setTime(Integer newTime)
     {
         time = newTime;
     }
-
-    public void setEnabled(Boolean isit)
-    {
-        isEnabled = isit;
+    public void setEnabled(boolean enabled) {
+        isEnabled = enabled;
     }
   
     // method get 
@@ -62,31 +52,19 @@ public class Device
     { 
         return device_ID; 
     }
-    
     public Integer getTime() 
     { 
         return time; 
     }
-
     public boolean getEnabled()
     {
         return isEnabled;
     }
-
-    public void haltDevice()
-    { 
-        //todo
-    }
-
     public Sensors getSensorData() {
         return data;
     }
-
     public Integer getOnline_time() {
         return online_time;
     }
 
-    public void setEnabled(boolean enabled) {
-        isEnabled = enabled;
-    }
 }

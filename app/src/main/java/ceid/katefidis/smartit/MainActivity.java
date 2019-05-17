@@ -184,28 +184,6 @@ public class MainActivity extends AppCompatActivity {
             lstItems.setAdapter(customSecurityList);
         }
 
-//        lstItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                HomeDevice device = (HomeDevice) lstItems.getItemAtPosition(i);
-//                Log.i("List", "You clicked on device " + device.getID());
-//            }
-//        });
-
-//        final ImageButton settings = lstItems.getSelectedView().findViewById(R.id.settings);
-//        settings.setOnClickListener(new View.OnClickListener() {
-//
-//            @Override
-//            public void onClick(View view) {
-//                Log.i("EPITELOUS", "PATHITHIKE");
-////                Intent i = new Intent(getContext(), DevicePreference.class);
-//                //((AppCompatActivity) context).getSupportFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsFragment()).commit();
-//            }
-//        });
-
-
-
-
 
     }
 

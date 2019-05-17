@@ -38,9 +38,7 @@ public class SettingsFragment extends Fragment {
         signout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = new Intent(getContext(), MainActivity.class);
-////                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-////                startActivity(intent);
+                //restart main activity
                 Intent i = getContext().getPackageManager().getLaunchIntentForPackage( getContext().getPackageName() );
                 i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(i);

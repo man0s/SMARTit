@@ -26,7 +26,6 @@ public class Apartment{
   public String getApartment(){return Apartment_ID;}
   public Tenant getTenant(){return the_tenant;}
   public ArrayList<HomeDevice> getDeviceList(){ return home_device_list; }
-
   public void addHomeDevice(HomeDevice obj){home_device_list.add(obj);}
   public void deleteHomeDevice(HomeDevice obj){home_device_list.remove(obj);}
 

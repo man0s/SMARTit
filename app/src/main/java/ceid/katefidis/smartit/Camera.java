@@ -22,12 +22,10 @@ public class Camera extends SecurityDevice
     { 
         return zoom; 
     }
-
     public Integer getRotation() 
     { 
         return rotation; 
     }
-
     public Integer getPlayback() 
     { 
         return playback; 
@@ -38,12 +36,10 @@ public class Camera extends SecurityDevice
     { 
         zoom = newZoom; 
     }
-
     public void setRotation(Integer newRotation) 
     { 
         rotation = newRotation; 
     }
-
     public void setPlayback(Integer newPlayback) 
     { 
         playback = newPlayback; 

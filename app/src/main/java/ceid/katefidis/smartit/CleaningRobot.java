@@ -17,8 +17,7 @@ public class CleaningRobot extends HomeDevice
     public String getMode() 
     { 
         return mode; 
-    } 
-  
+    }
     // method set
     public void setMode(String newMode) 
     { 

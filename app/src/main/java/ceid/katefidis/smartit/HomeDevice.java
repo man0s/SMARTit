@@ -9,7 +9,7 @@ public class HomeDevice extends Device
     private CleaningRobot cleaningrobot;
     // Instance Variables
 
-    HomeDevice(){};
+    HomeDevice(){}
 
     // Constructor Declaration of Class
     HomeDevice(String device_ID, Integer online_time, String device_name, Sensors data, Integer time, Boolean isEnabled)

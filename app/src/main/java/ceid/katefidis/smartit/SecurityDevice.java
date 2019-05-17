@@ -25,13 +25,15 @@ public class SecurityDevice extends Device
         else if(doorlock !=null) return "doorlock";
         else return null;
     }
-
     public Camera getCamera() {
         return camera;
     }
-
     public DoorLock getDoorlock() {
         return doorlock;
+    }
+    @Override
+    public Integer getOnline_time() {
+        return super.getOnline_time();
     }
 
     // method set
@@ -48,10 +50,5 @@ public class SecurityDevice extends Device
     @Override
     public void setOnlineTime(Integer newOnlineTime) {
         super.setOnlineTime(newOnlineTime);
-    }
-
-    @Override
-    public Integer getOnline_time() {
-        return super.getOnline_time();
     }
 }

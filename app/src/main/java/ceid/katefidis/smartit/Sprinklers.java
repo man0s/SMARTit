@@ -20,8 +20,7 @@ public class Sprinklers extends MaintenanceDevice
     public Integer getSpeed()
     { 
         return speed; 
-    } 
-  
+    }
     public Integer getPressure()
     { 
         return pressure; 
@@ -31,8 +30,7 @@ public class Sprinklers extends MaintenanceDevice
     public void setSpeed(Integer newspeed) 
     { 
         speed = newspeed; 
-    } 
-
+    }
     public void setPressure(Integer newpressure)
     { 
         pressure = newpressure;

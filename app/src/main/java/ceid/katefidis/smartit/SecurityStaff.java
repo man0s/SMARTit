@@ -4,11 +4,7 @@ package ceid.katefidis.smartit;
   
 public class SecurityStaff extends User
 { 
-    // Instance Variables 
-  
-    // Constructor Declaration of Class
 
-  
     // method get 
     public SecurityStaff(Integer id, String full_name, String email, String username, String password, String phone_number)
     {

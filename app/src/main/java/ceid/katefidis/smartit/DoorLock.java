@@ -22,30 +22,23 @@ public class DoorLock extends SecurityDevice
     { 
         return locked; 
     }
-
     public Integer getPassword() 
     { 
         return password; 
     }
-
     public Boolean getLockpicked() 
     { 
         return isLockpicked; 
     }
-  
+
     // method set
-    public void setZoom(Boolean newLocked) 
-    { 
-        locked = newLocked; 
+    public void setLockpicked(Boolean lockpicked) {
+        isLockpicked = lockpicked;
     }
-
-    public void setRotation(Integer newPassword)
-    { 
-        password = newPassword; 
+    public void setLocked(Boolean locked) {
+        this.locked = locked;
     }
-
-    public void setPlayback(Boolean newLockpicked) 
-    { 
-        isLockpicked = newLockpicked; 
+    public void setPassword(Integer password) {
+        this.password = password;
     }
 }

@@ -22,15 +22,12 @@ public class Lighting extends MaintenanceDevice
     public Integer getColorR() {
         return colorR;
     }
-
     public Integer getColorB() {
         return colorB;
     }
-
     public Integer getColorG() {
         return colorG;
     }
-
     public Integer getHue()
     { 
         return hue; 
@@ -40,15 +37,12 @@ public class Lighting extends MaintenanceDevice
     public void setColorR(Integer colorR) {
         this.colorR = colorR;
     }
-
     public void setColorG(Integer colorG) {
         this.colorG = colorG;
     }
-
     public void setColorB(Integer colorB) {
         this.colorB = colorB;
     }
-
     public void setHue(Integer newhue)
     { 
         hue = newhue;

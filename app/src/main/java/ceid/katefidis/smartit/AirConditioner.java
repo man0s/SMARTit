@@ -24,17 +24,14 @@ public class AirConditioner extends HomeDevice
     { 
         return temperature; 
     }
-
     public String getMode() 
     { 
         return mode; 
     }
-
     public Integer getDirection() 
     { 
         return directionFan; 
     }
-
     public Integer getIntensity() 
     { 
         return intensityFan; 
@@ -45,17 +42,14 @@ public class AirConditioner extends HomeDevice
     { 
         temperature = newTemperature; 
     }
-
     public void setMode(String newMode) 
     { 
         mode = newMode;
     }
-
     public void setDirection(Integer newDirection) 
     { 
         directionFan = newDirection; 
     }
-
     public void setIntensityFan(Integer newIntensity)
     { 
         intensityFan = newIntensity;

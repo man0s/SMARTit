@@ -19,17 +19,6 @@ public class MaintenanceDevice extends Device
         super(device_ID, online_time, device_name, data, time, isEnabled);
     }
 
-    public BuildingHeating getHeating() {
-        return heating;
-    }
-
-    public Sprinklers getSprinkler() {
-        return sprinkler;
-    }
-
-    public Lighting getLighting() {
-        return lighting;
-    }
 
     // method set
     public void setSettings(String settings)
@@ -40,6 +29,16 @@ public class MaintenanceDevice extends Device
             heating = new BuildingHeating(27, "normal");
         } else lighting = new Lighting(50, 136 ,253, 55);
 
+    }
+
+    public BuildingHeating getHeating() {
+        return heating;
+    }
+    public Sprinklers getSprinkler() {
+        return sprinkler;
+    }
+    public Lighting getLighting() {
+        return lighting;
     }
 
     public String getSettings()
