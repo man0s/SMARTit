@@ -36,7 +36,9 @@ public class CustomList extends ArrayAdapter<HomeDevice>{
         final Switch device_switch = (Switch) rowView.findViewById(R.id.device_switch);
         //final ImageButton settings = rowView.findViewById(R.id.settings);
         //ImageView imageView = (ImageView) rowView.findViewById(R.id.img);
-        txtTitle.setText(deviceList.get(position).getID());
+        String ID = deviceList.get(position).getID();
+        if(deviceList.get(position).getID().length() > 14) ID = deviceList.get(position).getID().substring(0, 14) + "..";
+        txtTitle.setText(ID);
         device_switch.setChecked(deviceList.get(position).getEnabled());
         device_switch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
