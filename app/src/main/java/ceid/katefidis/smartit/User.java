@@ -30,36 +30,28 @@ public User(Integer id, String full_name, String email, String username, String 
         {
             return full_name;
         }
+    public String getEmail() { return email; }
     public String getUsername()
         {
             return username;
-        }
-    public String getPassword()
-        {
-            return password;
         }
     public String getPhone()
         {
             return phone_number;
         }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public void setName(String full_name) {
+        this.full_name = full_name;
     }
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
-    }
-    public void setId(Integer id) {
-        this.id = id;
-    }
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public void setUsername(String username) { this.username = username; }
+    public void setPassword(String password) { this.password = password; }
+    public void setPhone(String phone_number) { this.phone_number = phone_number; }
+
 }
  

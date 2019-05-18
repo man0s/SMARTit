@@ -48,14 +48,4 @@ public class MaintenanceDevice extends Device
         else if(lighting != null) return "lighting";
         else return null;
     }
-
-    @Override
-    public void setOnlineTime(Integer newOnlineTime) {
-        super.setOnlineTime(newOnlineTime);
-    }
-
-    @Override
-    public Integer getOnline_time() {
-        return super.getOnline_time();
-    }
 }

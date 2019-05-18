@@ -31,10 +31,6 @@ public class SecurityDevice extends Device
     public DoorLock getDoorlock() {
         return doorlock;
     }
-    @Override
-    public Integer getOnline_time() {
-        return super.getOnline_time();
-    }
 
     // method set
     public void setSettings(String settings)
@@ -47,8 +43,4 @@ public class SecurityDevice extends Device
 
     }
 
-    @Override
-    public void setOnlineTime(Integer newOnlineTime) {
-        super.setOnlineTime(newOnlineTime);
-    }
 }

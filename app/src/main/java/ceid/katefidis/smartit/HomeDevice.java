@@ -50,14 +50,4 @@ public class HomeDevice extends Device
         } else cleaningrobot = new CleaningRobot("normal");
         
     }
-
-    @Override
-    public void setOnlineTime(Integer newOnlineTime) {
-        super.setOnlineTime(newOnlineTime);
-    }
-
-    @Override
-    public Integer getOnline_time() {
-        return super.getOnline_time();
-    }
 }
