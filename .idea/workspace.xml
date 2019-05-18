@@ -26,13 +26,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
+            <state relative-caret-position="255">
+              <caret line="161" column="28" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#6158#6993#0" expanded="true" />
+                <element signature="e#6992#6993#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,11 +74,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="368">
-              <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+              <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -138,7 +140,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomSecurityList.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/AddDeviceFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Admin.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/SecurityStaff.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/Sensors.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/SettingsFragment.java" />
@@ -170,6 +171,7 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/list_single.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -729,16 +731,6 @@
       </provider>
       <provider editor-type-id="android-manifest" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="184" column="9" selection-start-line="184" selection-start-column="9" selection-end-line="184" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/list_single.xml">
       <provider selected="true" editor-type-id="android-designer2" />
       <provider editor-type-id="text-editor">
@@ -750,9 +742,21 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/CustomList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="368">
-          <caret line="40" column="29" lean-forward="true" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
+          <caret line="40" column="29" selection-start-line="40" selection-start-column="29" selection-end-line="40" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/ceid/katefidis/smartit/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="161" column="28" selection-start-line="161" selection-start-column="28" selection-end-line="161" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6158#6993#0" expanded="true" />
+            <element signature="e#6992#6993#0" expanded="true" />
           </folding>
         </state>
       </provider>

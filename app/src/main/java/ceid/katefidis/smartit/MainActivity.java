@@ -152,9 +152,17 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     if(userType.equals("tenant")) {
-                        addDeviceTenant(view, apartment, customList);
+                        try {
+                            addDeviceTenant(view, apartment, customList);
+                        } catch (Exception e) {
+                            Log.d("Crash", "App has crashed!");
+                        }
                     } else {
-                        addDeviceBuilding(view, userType, building, customMaintenanceList, customSecurityList);
+                        try {
+                            addDeviceBuilding(view, userType, building, customMaintenanceList, customSecurityList);
+                        } catch (Exception e) {
+                            Log.d("Crash", "App has crashed!");
+                        }
                     }
                 }
             });
