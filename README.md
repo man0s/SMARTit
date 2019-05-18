@@ -12,8 +12,8 @@
 ## Screenshots
 <p align="center">
    <img src="https://i.imgur.com/DpVeVw6.png" width="270" height="480">
-   <img src="https://i.imgur.com/KajbAJe.png" width="270" height="480">
-   <img src="https://i.imgur.com/TutmFcA.png" width="270" height="480">
+   <img src="https://i.imgur.com/LmSGYlt.png" width="270" height="480">
+   <img src="https://i.imgur.com/kmO40XU.png" width="270" height="480">
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<em>Device Screen</em> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <em>Home Screen</em>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -26,4 +26,4 @@ Check [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 
-[MIT](LICENSE)© <a href="https://github.com/man0s">Emmanouil Katefidis</a>, <a href="https://github.com/pan0sSt">Panagiotis Stavrinakis</a>, <a href="https://github.com/pgkoros">Petros Gkoros</a>, Dionisis Papaspyrou and Giannis Gromitsaris.
+[MIT](LICENSE)© <a href="https://github.com/man0s">Emmanouil Katefidis</a>, <a href="https://github.com/pan0sSt">Panagiotis Stavrinakis</a>, <a href="https://github.com/pgkoros">Petros Gkoros</a>, <a href="https://github.com/huehueden">Dionisis Papaspyrou</a> and Giannis Gromitsaris.
