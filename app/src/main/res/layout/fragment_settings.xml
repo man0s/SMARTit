@@ -298,7 +298,7 @@
                 android:ellipsize="marquee"
                 android:fadingEdge="horizontal"
                 android:singleLine="true"
-                android:text="Log Out"
+                android:text="User"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textColor="@color/colorAccent"
                 android:textSize="14sp"
