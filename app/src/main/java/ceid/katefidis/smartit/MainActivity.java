@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Date;
 
@@ -181,6 +182,9 @@ public class MainActivity extends AppCompatActivity {
         final ListView lstItems;
 
         lstItems = (ListView)findViewById(R.id.lstItems);
+
+        TextView emptyText = (TextView)findViewById(android.R.id.empty);
+        lstItems.setEmptyView(emptyText);
 
 
         if(userType.equals("tenant"))

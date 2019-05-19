@@ -362,5 +362,17 @@
     <ListView
         android:id="@+id/lstItems"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:dividerHeight="1dp" />
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="You have not added yet a device!"
+        android:textColor="#000000" />
+
+
 </FrameLayout>
