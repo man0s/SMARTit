@@ -148,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
             final CustomMaintenanceList customMaintenanceList = new CustomMaintenanceList(MainActivity.this, building.getMaintanceDeviceList());
             final CustomSecurityList customSecurityList = new CustomSecurityList(MainActivity.this, building.getSecurityDeviceList());
 
+
             adddeviceButton.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -186,14 +187,49 @@ public class MainActivity extends AppCompatActivity {
         TextView emptyText = (TextView)findViewById(android.R.id.empty);
         lstItems.setEmptyView(emptyText);
 
+        //add 3 default devices for test purposes
+        int timeStamp = (int) (new Date().getTime()/1000);
+        Sensors sensor = new Sensors(timeStamp, 26, 85, 0);
 
         if(userType.equals("tenant"))
         {
-            lstItems.setAdapter(customList);
+            HomeDevice device_aircondition = new HomeDevice("1AIRCONDITION", 0, "1AIRCONDITION", sensor, -1, true);
+            apartment.addHomeDevice(device_aircondition);
+            device_aircondition.setSettings("airconditoner");
+            HomeDevice device_waterheater = new HomeDevice("2WATERHEATER", 0, "2WATERHEATER", sensor, -1, true);
+            apartment.addHomeDevice(device_waterheater);
+            device_waterheater.setSettings("waterheater");
+            HomeDevice device_cleaningrobot = new HomeDevice("3CLEANINGROBOT", 0, "3CLEANINGROBOT", sensor, -1, true);
+            apartment.addHomeDevice(device_cleaningrobot);
+            device_cleaningrobot.setSettings("cleaningrobot");
+            customList.notifyDataSetChanged(); //refresh
+
+            lstItems.setAdapter(customList); //set adapterr to custom list
         } else if (userType.equals("admin")){
-            lstItems.setAdapter(customMaintenanceList);
+            MaintenanceDevice device_sprinkler  = new MaintenanceDevice("1SPRINKLER", 0, "1SPRINKLER", sensor, -1, true);
+            device_sprinkler.setSettings("sprinkler");
+            building.addMaintenceDevice(device_sprinkler);
+            MaintenanceDevice device_heating  = new MaintenanceDevice("2HEATING", 0, "2HEATING", sensor, -1, true);
+            device_heating.setSettings("heating");
+            building.addMaintenceDevice(device_heating);
+            MaintenanceDevice device_lighting  = new MaintenanceDevice("3LIGHTING", 0, "3LIGHTING", sensor, -1, true);
+            device_lighting.setSettings("lighting");
+            building.addMaintenceDevice(device_lighting);
+
+            customMaintenanceList.notifyDataSetChanged(); //refresh list
+
+            lstItems.setAdapter(customMaintenanceList); //set adapter to custom maintenance list
         } else {
-            lstItems.setAdapter(customSecurityList);
+            SecurityDevice device_camera = new SecurityDevice("1CAMERA", 0, "1CAMERA", sensor, -1, true);
+            device_camera.setSettings("camera");
+            building.addSecurityDevice(device_camera);
+            SecurityDevice device_doorlock = new SecurityDevice("2DOORLOCK", 0, "2DOORLOCK", sensor, -1, true);
+            device_doorlock.setSettings("doorlock");
+            building.addSecurityDevice(device_doorlock);
+
+            customSecurityList.notifyDataSetChanged(); //refresh list
+
+            lstItems.setAdapter(customSecurityList); //set adapter to custom security list
         }
 
 
