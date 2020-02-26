@@ -1,4 +1,4 @@
-# SMARTit
+# 🧠 SMARTit
 <p align="center">
    <img src="https://i.imgur.com/fMb6Q78.png">
 </p>
